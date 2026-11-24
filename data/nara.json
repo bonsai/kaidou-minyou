@@ -1,0 +1,157 @@
+{
+ "dataset": "kaidou-minyou / nara",
+ "prefecture": "奈良県",
+ "version": "2026-11-25 draft",
+ "note": "位置ゲーム用スポットデータ。coord_accuracy: geocoded=座標取得済み / area=地名レベルの概略（要検証）。出典：日本民謡大観、Weblio都道府県別民謡リストほか。",
+ "spots": [
+  {
+   "id": "nara-otaue",
+   "song": "御田植歌",
+   "reading": "おたうえうた",
+   "place": "春日大社",
+   "municipality": "奈良市",
+   "lat": 34.6813,
+   "lng": 135.8485,
+   "coord_accuracy": "area",
+   "category": "神事歌",
+   "kaidou": "奈良街道（上街道）",
+   "radius_m": 300,
+   "points": 10,
+   "note": "春日神社の御田植祭に歌われる田植歌。『日本民謡大観』収録。"
+  },
+  {
+   "id": "nara-asafu",
+   "song": "麻布晒し唄",
+   "reading": "あさふさらしうた",
+   "place": "柳生",
+   "municipality": "奈良市柳生町",
+   "lat": 34.7319,
+   "lng": 135.9028,
+   "coord_accuracy": "area",
+   "category": "労働歌",
+   "kaidou": "柳生街道",
+   "radius_m": 400,
+   "points": 10,
+   "note": "柳生村の唄として『民謡大観』の奈良リストに収録。麻布を晒す作業の歌。"
+  },
+  {
+   "id": "nara-okage",
+   "song": "お蔭踊",
+   "reading": "おかげおどり",
+   "place": "柳生",
+   "municipality": "奈良市柳生町",
+   "lat": 34.7319,
+   "lng": 135.9028,
+   "coord_accuracy": "area",
+   "category": "踊り",
+   "kaidou": "柳生街道",
+   "radius_m": 400,
+   "points": 10,
+   "note": "柳生村の唄として『民謡大観』の奈良リストに収録。"
+  },
+  {
+   "id": "nara-miwa-somen",
+   "song": "三輪素麺掛け唄",
+   "reading": "みわそうめんかけうた",
+   "place": "三輪",
+   "municipality": "桜井市",
+   "lat": 34.5258,
+   "lng": 135.848,
+   "coord_accuracy": "geocoded",
+   "category": "労働歌",
+   "kaidou": "山の辺の道",
+   "radius_m": 400,
+   "points": 10,
+   "note": "三輪そうめん作りの作業唄。大神神社の門前町。"
+  },
+  {
+   "id": "nara-kingyo",
+   "song": "金魚音頭",
+   "reading": "きんぎょおんど",
+   "place": "大和郡山",
+   "municipality": "大和郡山市",
+   "lat": 34.6451,
+   "lng": 135.7667,
+   "coord_accuracy": "geocoded",
+   "category": "盆踊り",
+   "kaidou": "郡山城下",
+   "radius_m": 400,
+   "points": 10,
+   "note": "金魚の養殖で知られる大和郡山の盆踊り。金魚踊りとも。"
+  },
+  {
+   "id": "nara-yoshino-kobiki",
+   "song": "吉野木挽唄",
+   "reading": "よしのこびきうた",
+   "place": "吉野",
+   "municipality": "吉野郡吉野町",
+   "lat": 34.4221,
+   "lng": 135.9374,
+   "coord_accuracy": "geocoded",
+   "category": "労働歌",
+   "kaidou": "吉野路",
+   "radius_m": 500,
+   "points": 10,
+   "note": "吉野の林業・木挽きの労働歌。"
+  },
+  {
+   "id": "nara-yoshino-ikada",
+   "song": "吉野筏流し歌",
+   "reading": "よしのいかだながしうた",
+   "place": "吉野川",
+   "municipality": "吉野郡吉野町",
+   "lat": 34.4221,
+   "lng": 135.9374,
+   "coord_accuracy": "geocoded",
+   "category": "労働歌",
+   "kaidou": "吉野路",
+   "radius_m": 500,
+   "points": 10,
+   "note": "吉野川の筏流しの労働歌。木材を川で運んだ時代の歌。"
+  },
+  {
+   "id": "nara-chabatake",
+   "song": "茶摘み唄",
+   "reading": "ちゃつみうた",
+   "place": "大和高原（都祁）",
+   "municipality": "奈良市都祁",
+   "lat": 34.6056,
+   "lng": 135.9547,
+   "coord_accuracy": "area",
+   "category": "労働歌",
+   "kaidou": "伊勢街道",
+   "radius_m": 500,
+   "points": 10,
+   "note": "大和高原のお茶摘みの歌。"
+  }
+ ],
+ "routes": [
+  {
+   "id": "yagyu-kaido",
+   "name": "柳生街道",
+   "spots": [
+    "nara-otaue",
+    "nara-asafu",
+    "nara-okage"
+   ],
+   "note": "奈良の街から剣豪の里・柳生へ抜ける古道。"
+  },
+  {
+   "id": "yamanobe",
+   "name": "山の辺の道",
+   "spots": [
+    "nara-miwa-somen"
+   ],
+   "note": "三輪山の麓をたどる日本最古の道。"
+  },
+  {
+   "id": "yoshino-ji",
+   "name": "吉野路",
+   "spots": [
+    "nara-yoshino-kobiki",
+    "nara-yoshino-ikada"
+   ],
+   "note": "吉野川と林業の道。"
+  }
+ ]
+}

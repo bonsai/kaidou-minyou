@@ -1,0 +1,139 @@
+{
+ "nodes": [
+  {
+   "id": "nara-otaue",
+   "song": "御田植歌",
+   "place": "春日大社",
+   "lat": 34.6813,
+   "lng": 135.8485
+  },
+  {
+   "id": "nara-asafu",
+   "song": "麻布晒し唄",
+   "place": "柳生",
+   "lat": 34.7319,
+   "lng": 135.9028
+  },
+  {
+   "id": "nara-okage",
+   "song": "お蔭踊",
+   "place": "柳生",
+   "lat": 34.7319,
+   "lng": 135.9028
+  },
+  {
+   "id": "nara-miwa-somen",
+   "song": "三輪素麺掛け唄",
+   "place": "三輪",
+   "lat": 34.5258,
+   "lng": 135.848
+  },
+  {
+   "id": "nara-kingyo",
+   "song": "金魚音頭",
+   "place": "大和郡山",
+   "lat": 34.6451,
+   "lng": 135.7667
+  },
+  {
+   "id": "nara-yoshino-kobiki",
+   "song": "吉野木挽唄",
+   "place": "吉野",
+   "lat": 34.4221,
+   "lng": 135.9374
+  },
+  {
+   "id": "nara-yoshino-ikada",
+   "song": "吉野筏流し歌",
+   "place": "吉野川",
+   "lat": 34.4221,
+   "lng": 135.9374
+  },
+  {
+   "id": "nara-chabatake",
+   "song": "茶摘み唄",
+   "place": "大和高原（都祁）",
+   "lat": 34.6056,
+   "lng": 135.9547
+  }
+ ],
+ "edges": [
+  {
+   "from": "nara-asafu",
+   "to": "nara-okage",
+   "km": 0.0,
+   "koi": 115,
+   "route": true
+  },
+  {
+   "from": "nara-yoshino-kobiki",
+   "to": "nara-yoshino-ikada",
+   "km": 0.0,
+   "koi": 115,
+   "route": true
+  },
+  {
+   "from": "nara-otaue",
+   "to": "nara-asafu",
+   "km": 7.5,
+   "koi": 94,
+   "route": true
+  },
+  {
+   "from": "nara-otaue",
+   "to": "nara-okage",
+   "km": 7.5,
+   "koi": 79,
+   "route": false
+  },
+  {
+   "from": "nara-otaue",
+   "to": "nara-kingyo",
+   "km": 8.5,
+   "koi": 76,
+   "route": false
+  },
+  {
+   "from": "nara-otaue",
+   "to": "nara-chabatake",
+   "km": 12.85,
+   "koi": 63,
+   "route": false
+  },
+  {
+   "from": "nara-miwa-somen",
+   "to": "nara-chabatake",
+   "km": 13.2,
+   "koi": 62,
+   "route": false
+  },
+  {
+   "from": "nara-miwa-somen",
+   "to": "nara-yoshino-kobiki",
+   "km": 14.15,
+   "koi": 60,
+   "route": false
+  },
+  {
+   "from": "nara-miwa-somen",
+   "to": "nara-yoshino-ikada",
+   "km": 14.15,
+   "koi": 60,
+   "route": false
+  },
+  {
+   "from": "nara-asafu",
+   "to": "nara-chabatake",
+   "km": 14.82,
+   "koi": 58,
+   "route": false
+  },
+  {
+   "from": "nara-okage",
+   "to": "nara-chabatake",
+   "km": 14.82,
+   "koi": 58,
+   "route": false
+  }
+ ]
+}

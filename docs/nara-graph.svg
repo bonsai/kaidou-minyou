@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="640" viewBox="0 0 760 640">
+<rect width="100%" height="100%" fill="#fdfaf3"/>
+<text x="24" y="36" font-size="20" font-weight="bold" fill="#8a3b12" font-family="sans-serif">奈良民謡 ― 濃い道グラフ</text>
+<text x="24" y="58" font-size="11" fill="#5c5546" font-family="sans-serif">線の太さ＝濃さ（近さ＋街道つながり）／徒歩ロジー</text>
+<line x1="519" y1="70" x2="545" y2="84" stroke="#b3541e" stroke-width="9.2" stroke-opacity="0.75" stroke-linecap="round"/>
+<text x="532" y="73" font-size="10" fill="#5c5546" text-anchor="middle" font-family="sans-serif">0km</text>
+<line x1="633" y1="570" x2="659" y2="584" stroke="#b3541e" stroke-width="9.2" stroke-opacity="0.75" stroke-linecap="round"/>
+<text x="646" y="573" font-size="10" fill="#5c5546" text-anchor="middle" font-family="sans-serif">0km</text>
+<line x1="340" y1="152" x2="519" y2="70" stroke="#b3541e" stroke-width="7.7" stroke-opacity="0.75" stroke-linecap="round"/>
+<text x="429" y="107" font-size="10" fill="#5c5546" text-anchor="middle" font-family="sans-serif">8km</text>
+<line x1="340" y1="152" x2="545" y2="84" stroke="#c9a227" stroke-width="6.6" stroke-opacity="0.75" stroke-linecap="round"/>
+<text x="442" y="114" font-size="10" fill="#5c5546" text-anchor="middle" font-family="sans-serif">8km</text>
+<line x1="340" y1="152" x2="70" y2="210" stroke="#c9a227" stroke-width="6.4" stroke-opacity="0.75" stroke-linecap="round"/>
+<text x="205" y="177" font-size="10" fill="#5c5546" text-anchor="middle" font-family="sans-serif">8km</text>
+<line x1="340" y1="152" x2="690" y2="274" stroke="#c9a227" stroke-width="5.5" stroke-opacity="0.75" stroke-linecap="round"/>
+<text x="515" y="209" font-size="10" fill="#5c5546" text-anchor="middle" font-family="sans-serif">13km</text>
+<line x1="338" y1="403" x2="690" y2="274" stroke="#c9a227" stroke-width="5.4" stroke-opacity="0.75" stroke-linecap="round"/>
+<text x="514" y="334" font-size="10" fill="#5c5546" text-anchor="middle" font-family="sans-serif">13km</text>
+<line x1="338" y1="403" x2="633" y2="570" stroke="#c9a227" stroke-width="5.3" stroke-opacity="0.75" stroke-linecap="round"/>
+<text x="486" y="482" font-size="10" fill="#5c5546" text-anchor="middle" font-family="sans-serif">14km</text>
+<line x1="338" y1="403" x2="659" y2="584" stroke="#c9a227" stroke-width="5.3" stroke-opacity="0.75" stroke-linecap="round"/>
+<text x="499" y="489" font-size="10" fill="#5c5546" text-anchor="middle" font-family="sans-serif">14km</text>
+<line x1="519" y1="70" x2="690" y2="274" stroke="#c9a227" stroke-width="5.1" stroke-opacity="0.75" stroke-linecap="round"/>
+<text x="604" y="168" font-size="10" fill="#5c5546" text-anchor="middle" font-family="sans-serif">15km</text>
+<line x1="545" y1="84" x2="690" y2="274" stroke="#c9a227" stroke-width="5.1" stroke-opacity="0.75" stroke-linecap="round"/>
+<text x="617" y="175" font-size="10" fill="#5c5546" text-anchor="middle" font-family="sans-serif">15km</text>
+<circle cx="340" cy="152" r="9" fill="#fffdf8" stroke="#8a3b12" stroke-width="2.5"/>
+<text x="340" y="136" font-size="13" font-weight="bold" fill="#26221c" text-anchor="middle" font-family="sans-serif">御田植歌</text>
+<text x="340" y="176" font-size="10" fill="#5c5546" text-anchor="middle" font-family="sans-serif">春日大社</text>
+<circle cx="519" cy="70" r="9" fill="#fffdf8" stroke="#8a3b12" stroke-width="2.5"/>
+<text x="519" y="54" font-size="13" font-weight="bold" fill="#26221c" text-anchor="middle" font-family="sans-serif">麻布晒し唄</text>
+<text x="519" y="94" font-size="10" fill="#5c5546" text-anchor="middle" font-family="sans-serif">柳生</text>
+<circle cx="545" cy="84" r="9" fill="#fffdf8" stroke="#8a3b12" stroke-width="2.5"/>
+<text x="545" y="68" font-size="13" font-weight="bold" fill="#26221c" text-anchor="middle" font-family="sans-serif">お蔭踊</text>
+<text x="545" y="108" font-size="10" fill="#5c5546" text-anchor="middle" font-family="sans-serif">柳生</text>
+<circle cx="338" cy="403" r="9" fill="#fffdf8" stroke="#8a3b12" stroke-width="2.5"/>
+<text x="338" y="387" font-size="13" font-weight="bold" fill="#26221c" text-anchor="middle" font-family="sans-serif">三輪素麺掛け唄</text>
+<text x="338" y="427" font-size="10" fill="#5c5546" text-anchor="middle" font-family="sans-serif">三輪</text>
+<circle cx="70" cy="210" r="9" fill="#fffdf8" stroke="#8a3b12" stroke-width="2.5"/>
+<text x="70" y="194" font-size="13" font-weight="bold" fill="#26221c" text-anchor="middle" font-family="sans-serif">金魚音頭</text>
+<text x="70" y="234" font-size="10" fill="#5c5546" text-anchor="middle" font-family="sans-serif">大和郡山</text>
+<circle cx="633" cy="570" r="9" fill="#fffdf8" stroke="#8a3b12" stroke-width="2.5"/>
+<text x="633" y="554" font-size="13" font-weight="bold" fill="#26221c" text-anchor="middle" font-family="sans-serif">吉野木挽唄</text>
+<text x="633" y="594" font-size="10" fill="#5c5546" text-anchor="middle" font-family="sans-serif">吉野</text>
+<circle cx="659" cy="584" r="9" fill="#fffdf8" stroke="#8a3b12" stroke-width="2.5"/>
+<text x="659" y="568" font-size="13" font-weight="bold" fill="#26221c" text-anchor="middle" font-family="sans-serif">吉野筏流し歌</text>
+<text x="659" y="608" font-size="10" fill="#5c5546" text-anchor="middle" font-family="sans-serif">吉野川</text>
+<circle cx="690" cy="274" r="9" fill="#fffdf8" stroke="#8a3b12" stroke-width="2.5"/>
+<text x="690" y="258" font-size="13" font-weight="bold" fill="#26221c" text-anchor="middle" font-family="sans-serif">茶摘み唄</text>
+<text x="690" y="298" font-size="10" fill="#5c5546" text-anchor="middle" font-family="sans-serif">大和高原（都祁）</text>
+</svg>

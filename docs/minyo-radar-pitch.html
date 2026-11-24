@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>民謡レーダー — 企画説明</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; background: #0d1b12; color: #eef4ea; line-height: 1.8; }
+  header { text-align: center; padding: 48px 20px 8px; }
+  h1 { font-size: 44px; margin: 0; letter-spacing: .12em; }
+  .sub { color: #9fd6a8; letter-spacing: .2em; margin-top: 4px; }
+  main { max-width: 760px; margin: 0 auto; padding: 0 20px 80px; }
+  section { margin-top: 56px; }
+  h2 { font-size: 22px; border-left: 6px solid #58b368; padding-left: 12px; margin-bottom: 8px; }
+  .quote { font-size: 21px; text-align: center; background: #14301c; border-radius: 12px; padding: 22px; margin: 28px 0; }
+  .quote small { display: block; font-size: 13px; color: #9fd6a8; margin-top: 8px; }
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+  .card { background: #14301c; border: 1px solid #2c5a36; border-radius: 12px; padding: 18px; }
+  .card h3 { margin: 0 0 6px; font-size: 18px; }
+  .card .tag { display: inline-block; font-size: 12px; background: #58b368; color: #0d1b12; border-radius: 999px; padding: 2px 10px; margin-bottom: 8px; font-weight: bold; }
+  .card p { margin: 0; font-size: 14px; color: #cfe3d2; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 12px; }
+  th, td { border-bottom: 1px solid #2c5a36; padding: 8px 6px; text-align: left; }
+  th { color: #9fd6a8; }
+  .note { font-size: 13px; color: #a9c4ad; }
+  .steps { counter-reset: s; list-style: none; padding: 0; }
+  .steps li { counter-increment: s; margin: 10px 0; padding-left: 44px; position: relative; }
+  .steps li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 30px; height: 30px; border-radius: 50%; background: #58b368; color: #0d1b12; font-weight: bold; text-align: center; line-height: 30px; }
+  svg { display: block; margin: 16px auto; max-width: 100%; height: auto; }
+  .sweep { transform-origin: 200px 200px; animation: spin 6s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .blip { animation: pulse 2.4s ease-out infinite; transform-origin: center; transform-box: fill-box; }
+  .blip.d2 { animation-delay: .8s; } .blip.d3 { animation-delay: 1.6s; }
+  @keyframes pulse { 0% { opacity: .9; transform: scale(.4); } 70% { opacity: 0; transform: scale(2.6); } 100% { opacity: 0; } }
+  .dash { stroke-dasharray: 6 6; animation: march 1.2s linear infinite; }
+  @keyframes march { to { stroke-dashoffset: -12; } }
+  .draw { stroke-dasharray: 300; stroke-dashoffset: 300; animation: draw 3s ease forwards infinite alternate; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  footer { text-align: center; font-size: 13px; color: #a9c4ad; padding-bottom: 40px; }
+  @media (max-width: 600px) { h1 { font-size: 32px; } .cards { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>民謡レーダー</h1>
+  <div class="sub">MINYO RADAR — 位置情報から、音声で誘う民謡案内</div>
+</header>
+<main>
+
+  <!-- レーダー -->
+  <svg viewBox="0 0 400 400" width="360" role="img" aria-label="レーダーのアニメーション">
+    <circle cx="200" cy="200" r="190" fill="#122a18" stroke="#58b368" stroke-width="2"/>
+    <circle cx="200" cy="200" r="140" fill="none" stroke="#2c5a36"/>
+    <circle cx="200" cy="200" r="90" fill="none" stroke="#2c5a36"/>
+    <circle cx="200" cy="200" r="40" fill="none" stroke="#2c5a36"/>
+    <line x1="200" y1="10" x2="200" y2="390" stroke="#2c5a36"/>
+    <line x1="10" y1="200" x2="390" y2="200" stroke="#2c5a36"/>
+    <g class="sweep"><line x1="200" y1="200" x2="200" y2="20" stroke="#7be495" stroke-width="3"/><circle cx="200" cy="200" r="6" fill="#7be495"/></g>
+    <circle class="blip" cx="270" cy="120" r="12" fill="none" stroke="#ffd166" stroke-width="2"/>
+    <circle cx="270" cy="120" r="6" fill="#ffd166"/>
+    <circle class="blip d2" cx="130" cy="250" r="12" fill="none" stroke="#ffd166" stroke-width="2"/>
+    <circle cx="130" cy="250" r="6" fill="#ffd166"/>
+    <circle class="blip d3" cx="300" cy="280" r="12" fill="none" stroke="#ffd166" stroke-width="2"/>
+    <circle cx="300" cy="280" r="6" fill="#ffd166"/>
+    <text x="200" y="395" fill="#9fd6a8" font-size="13" text-anchor="middle">近づくと、民謡の地がレーダーに映る</text>
+  </svg>
+
+  <section>
+    <div class="quote">「あっちのほうに、何か面白そうなものがあるよ。行ってみない？」
+      <small>地図のリストは見せない。位置情報から、音声で誘う。偶然の出会い（セレンディピティ）を先に置く案内。</small>
+    </div>
+    <p>旅先・観光地で「近くに何があるかわからない」ときに使うアプリ。画面を見るのではなく、声で聞く。民謡の生まれた場所、祭り・踊りの場が、近づくにつれてレーダーに浮かび上がる。</p>
+  </section>
+
+  <section>
+    <h2>2つのアプリ</h2>
+    <div class="cards">
+      <div class="card"><span class="tag">汎用版</span><h3>音声案内ナビゲーション</h3><p>名前未定。観光スポット全般が対象。位置情報から音声で「あっちに面白そうなものがあるよ」と案内する仕組みそのもの。</p></div>
+      <div class="card"><span class="tag">民謡特化版</span><h3>民謡レーダー</h3><p>汎用版の仕組みを民謡に特化。唄の生まれた場所・祭りの場をレーダーで案内する。データは街道ルートでつながる。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>どう動くか</h2>
+    <ol class="steps">
+      <li>歩く。アプリは位置情報だけを見る。</li>
+      <li>近くに民謡の地があると、音声で「あっちのほうに」と誘う。</li>
+      <li>近づくとスポットがレーダーに映る。チェックイン半径（300〜500m）に入ればポイント。</li>
+      <li>スポットは街道ルートでつながっている。1件が次の1件を呼ぶ。</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>徒歩ロジー</h2>
+    <p>トポロジー × 徒歩。民謡スポットのつながり（トポロジー）を、車で飛ばさず徒歩旅でたどるナビの考え方。奈良のスポットと街道ルートのグラフが、その最初のフィールド。</p>
+    <svg viewBox="0 0 700 260" width="700" role="img" aria-label="奈良の民謡スポットをつなぐグラフ">
+      <path class="draw" d="M80 130 L220 70 L360 110 L500 60 L620 130" fill="none" stroke="#58b368" stroke-width="2"/>
+      <path class="dash" d="M360 110 L420 200 L620 130" fill="none" stroke="#ffd166" stroke-width="2"/>
+      <g fill="#ffd166" font-size="13">
+        <circle cx="80" cy="130" r="7"/><text x="60" y="160">柳生</text>
+        <circle cx="220" cy="70" r="7"/><text x="190" y="50">春日大社</text>
+        <circle cx="360" cy="110" r="7"/><text x="330" y="90">三輪</text>
+        <circle cx="500" cy="60" r="7"/><text x="470" y="40">大和郡山</text>
+        <circle cx="620" cy="130" r="7"/><text x="600" y="160">吉野</text>
+        <circle cx="420" cy="200" r="7"/><text x="390" y="230">都祁</text>
+      </g>
+      <text x="350" y="30" fill="#9fd6a8" font-size="13" text-anchor="middle">三輪が蝶番 — 北の里歩きと、吉野の山歩きに分かれる</text>
+    </svg>
+  </section>
+
+  <section>
+    <h2>データ — 奈良（完成）</h2>
+    <p>スポット8件・ルート3本。座標の精度は <code>coord_accuracy</code> で区別する（geocoded＝取得済み／area＝地名レベルの概略・要検証）。</p>
+    <table>
+      <tr><th>唄</th><th>場所</th><th>街道</th></tr>
+      <tr><td>御田植歌</td><td>春日大社</td><td>奈良街道</td></tr>
+      <tr><td>麻布晒し唄・お蔭踊</td><td>柳生</td><td>柳生街道</td></tr>
+      <tr><td>三輪素麺掛け唄</td><td>三輪</td><td>山の辺の道</td></tr>
+      <tr><td>金魚音頭</td><td>大和郡山</td><td>郡山城下</td></tr>
+      <tr><td>吉野木挽唄・吉野筏流し歌</td><td>吉野</td><td>吉野路</td></tr>
+      <tr><td>茶摘み唄</td><td>大和高原（都祁）</td><td>伊勢街道</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>データ — 和歌山（下書き・次）</h2>
+    <p>スポット5件・ルート2本（熊野古道／紀伊路）。奈良版と同じ形式 <code>data/wakayama.json</code> の下書きができた。</p>
+    <table>
+      <tr><th>唄</th><th>場所</th><th>街道</th></tr>
+      <tr><td>串本節</td><td>串本町</td><td>熊野古道</td></tr>
+      <tr><td>勝浦節</td><td>那智勝浦町</td><td>熊野古道</td></tr>
+      <tr><td>那智の田楽</td><td>熊野那智大社</td><td>熊野古道</td></tr>
+      <tr><td>河内祭の御舟行事</td><td>古座川</td><td>熊野古道</td></tr>
+      <tr><td>みかん摘み唄</td><td>有田</td><td>紀伊路</td></tr>
+    </table>
+    <p class="note">未収録：地搗唄・筏節（見つからず）。白浜節は沖縄の同名曲と区別して除外。座標はすべて町レベルの概略（area）で、要検証。</p>
+  </section>
+
+  <section>
+    <h2>いまの状態と次</h2>
+    <ul>
+      <li>リポジトリ <code>bonsai/kaidou-minyou</code>（private）に奈良データ・企画書・グラフを push 済み。</li>
+      <li>このページは GitHub Pages での公開を想定（public で可）。</li>
+      <li>次：和歌山データの検証（座標のピンポイント化）と、位置ゲーム側の実装（チェックイン、ルート踏破）。</li>
+    </ul>
+  </section>
+</main>
+<footer>民謡レーダー — kaidou-minyou / 2026-11-25</footer>
+</body>
+</html>

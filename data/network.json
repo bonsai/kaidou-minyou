@@ -1,4 +1,5 @@
 {
+ "schema": 2,
  "nodes": [
   {
    "id": "mie-iseondo",
@@ -437,519 +438,837 @@
   {
    "a": "mie-iseondo",
    "b": "mie-okibiki",
+   "category": "街道",
+   "confidence": 0.85,
    "types": [
-    "地理近接",
+    "街道",
     "系譜",
-    "街道"
+    "地理近接"
    ],
-   "basis": [
-    "1km",
-    "参宮街道（東海道〜伊勢）",
-    "お木曳木遣が伊勢音頭の源流"
+   "links": [
+    {
+     "category": "街道",
+     "evidence": "両スポットの kaidou フィールドが「参宮街道（東海道〜伊勢）」で一致（data/mie.json／data/mie.json）",
+     "confidence": 0.85
+    },
+    {
+     "category": "系譜",
+     "evidence": "mie.json お木曳木遣の note：Wikipedia「松前木遣」に伊勢神宮のお木曳木遣の歌詞・伝承が詳述。木遣りが音頭の源流",
+     "confidence": 0.85
+    },
+    {
+     "category": "地理近接",
+     "evidence": "座標間の直線距離 0.6km（伊勢音頭 34.487,136.709 ⇔ お木曳木遣 34.49,136.715）",
+     "confidence": 0.55
+    }
    ],
    "cross": false
   },
   {
    "a": "mie-iseondo",
    "b": "mie-okage",
+   "category": "街道",
+   "confidence": 0.85,
    "types": [
-    "地理近接",
-    "街道"
+    "街道",
+    "地理近接"
    ],
-   "basis": [
-    "4km",
-    "参宮街道（東海道〜伊勢）"
+   "links": [
+    {
+     "category": "街道",
+     "evidence": "両スポットの kaidou フィールドが「参宮街道（東海道〜伊勢）」で一致（data/mie.json／data/mie.json）",
+     "confidence": 0.85
+    },
+    {
+     "category": "地理近接",
+     "evidence": "座標間の直線距離 4.0km（伊勢音頭 34.487,136.709 ⇔ お蔭踊り 34.455,136.728）",
+     "confidence": 0.55
+    }
    ],
    "cross": false
   },
   {
    "a": "mie-okage",
    "b": "mie-okibiki",
+   "category": "地理近接",
+   "confidence": 0.55,
    "types": [
     "地理近接"
    ],
-   "basis": [
-    "4km"
+   "links": [
+    {
+     "category": "地理近接",
+     "evidence": "座標間の直線距離 4.1km（お木曳木遣 34.49,136.715 ⇔ お蔭踊り 34.455,136.728）",
+     "confidence": 0.55
+    }
    ],
    "cross": false
   },
   {
    "a": "nara-asafu",
    "b": "nara-otaue",
+   "category": "地理近接",
+   "confidence": 0.55,
    "types": [
     "地理近接"
    ],
-   "basis": [
-    "8km"
+   "links": [
+    {
+     "category": "地理近接",
+     "evidence": "座標間の直線距離 7.5km（御田植歌 34.6813,135.8485 ⇔ 麻布晒し唄 34.7319,135.9028）",
+     "confidence": 0.55
+    }
    ],
    "cross": false
   },
   {
    "a": "nara-okage",
    "b": "nara-otaue",
+   "category": "地理近接",
+   "confidence": 0.55,
    "types": [
     "地理近接"
    ],
-   "basis": [
-    "8km"
+   "links": [
+    {
+     "category": "地理近接",
+     "evidence": "座標間の直線距離 7.5km（御田植歌 34.6813,135.8485 ⇔ お蔭踊 34.7319,135.9028）",
+     "confidence": 0.55
+    }
    ],
    "cross": false
   },
   {
    "a": "nara-kingyo",
    "b": "nara-otaue",
+   "category": "地理近接",
+   "confidence": 0.55,
    "types": [
     "地理近接"
    ],
-   "basis": [
-    "8km"
+   "links": [
+    {
+     "category": "地理近接",
+     "evidence": "座標間の直線距離 8.5km（御田植歌 34.6813,135.8485 ⇔ 金魚音頭 34.6451,135.7667）",
+     "confidence": 0.55
+    }
    ],
    "cross": false
   },
   {
    "a": "nara-asafu",
    "b": "nara-okage",
+   "category": "街道",
+   "confidence": 0.85,
    "types": [
-    "地理近接",
-    "街道"
+    "街道",
+    "地理近接"
    ],
-   "basis": [
-    "0km",
-    "柳生街道"
+   "links": [
+    {
+     "category": "街道",
+     "evidence": "両スポットの kaidou フィールドが「柳生街道」で一致（data/nara.json／data/nara.json）",
+     "confidence": 0.85
+    },
+    {
+     "category": "地理近接",
+     "evidence": "座標間の直線距離 0.0km（麻布晒し唄 34.7319,135.9028 ⇔ お蔭踊 34.7319,135.9028）",
+     "confidence": 0.55
+    }
    ],
    "cross": false
   },
   {
    "a": "nara-yoshino-ikada",
    "b": "nara-yoshino-kobiki",
+   "category": "街道",
+   "confidence": 0.85,
    "types": [
-    "地理近接",
-    "街道"
+    "街道",
+    "地理近接"
    ],
-   "basis": [
-    "0km",
-    "吉野路"
+   "links": [
+    {
+     "category": "街道",
+     "evidence": "両スポットの kaidou フィールドが「吉野路」で一致（data/nara.json／data/nara.json）",
+     "confidence": 0.85
+    },
+    {
+     "category": "地理近接",
+     "evidence": "座標間の直線距離 0.0km（吉野木挽唄 34.4221,135.9374 ⇔ 吉野筏流し歌 34.4221,135.9374）",
+     "confidence": 0.55
+    }
    ],
    "cross": false
   },
   {
    "a": "osaka-kawachi",
    "b": "osaka-sumiyoshi",
+   "category": "地理近接",
+   "confidence": 0.55,
    "types": [
     "地理近接"
    ],
-   "basis": [
-    "10km"
+   "links": [
+    {
+     "category": "地理近接",
+     "evidence": "座標間の直線距離 9.8km（河内音頭 34.617,135.6 ⇔ 住吉踊り 34.612,135.493）",
+     "confidence": 0.55
+    }
    ],
    "cross": false
   },
   {
    "a": "osaka-katano",
    "b": "osaka-sanjikkoku",
+   "category": "街道",
+   "confidence": 0.85,
    "types": [
-    "地理近接",
-    "街道"
+    "街道",
+    "地理近接"
    ],
-   "basis": [
-    "4km",
-    "京街道・淀川"
+   "links": [
+    {
+     "category": "街道",
+     "evidence": "両スポットの kaidou フィールドが「京街道・淀川」で一致（data/osaka.json／data/osaka.json）",
+     "confidence": 0.85
+    },
+    {
+     "category": "地理近接",
+     "evidence": "座標間の直線距離 3.8km（交野節 34.788,135.676 ⇔ 淀川三十石船唄 34.815,135.651）",
+     "confidence": 0.55
+    }
    ],
    "cross": false
   },
   {
    "a": "osaka-horie",
    "b": "osaka-sumiyoshi",
+   "category": "地理近接",
+   "confidence": 0.55,
    "types": [
     "地理近接"
    ],
-   "basis": [
-    "7km"
+   "links": [
+    {
+     "category": "地理近接",
+     "evidence": "座標間の直線距離 6.7km（住吉踊り 34.612,135.493 ⇔ 大阪盆踊歌（堀江盆踊唄） 34.672,135.487）",
+     "confidence": 0.55
+    }
    ],
    "cross": false
   },
   {
    "a": "osaka-danjiri",
    "b": "osaka-senbon",
+   "category": "街道",
+   "confidence": 0.85,
    "types": [
-    "地理近接",
-    "街道"
+    "街道",
+    "地理近接"
    ],
-   "basis": [
-    "6km",
-    "紀州街道・泉州"
+   "links": [
+    {
+     "category": "街道",
+     "evidence": "両スポットの kaidou フィールドが「紀州街道・泉州」で一致（data/osaka.json／data/osaka.json）",
+     "confidence": 0.85
+    },
+    {
+     "category": "地理近接",
+     "evidence": "座標間の直線距離 6.2km（地車囃子（だんじり囃子） 34.46,135.371 ⇔ 千本搗餅搗唄 34.405,135.385）",
+     "confidence": 0.55
+    }
    ],
    "cross": false
   },
   {
    "a": "tokushima-awaodori",
    "b": "tokushima-sekizoro",
+   "category": "地理近接",
+   "confidence": 0.55,
    "types": [
     "地理近接"
    ],
-   "basis": [
-    "1km"
+   "links": [
+    {
+     "category": "地理近接",
+     "evidence": "座標間の直線距離 0.6km（阿波踊り（よしこの節） 34.07,134.555 ⇔ せきぞろ（節季候） 34.066,134.56）",
+     "confidence": 0.55
+    }
    ],
    "cross": false
   },
   {
    "a": "tokushima-iya-jinku",
    "b": "tokushima-iya-konahiki",
+   "category": "街道",
+   "confidence": 0.85,
    "types": [
-    "地理近接",
-    "街道"
+    "街道",
+    "地理近接"
    ],
-   "basis": [
-    "1km",
-    "祖谷路"
+   "links": [
+    {
+     "category": "街道",
+     "evidence": "両スポットの kaidou フィールドが「祖谷路」で一致（data/tokushima.json／data/tokushima.json）",
+     "confidence": 0.85
+    },
+    {
+     "category": "地理近接",
+     "evidence": "座標間の直線距離 0.7km（祖谷の粉ひき唄 33.935,133.835 ⇔ 祖谷甚句 33.94,133.84）",
+     "confidence": 0.55
+    }
    ],
    "cross": false
   },
   {
    "a": "tokushima-naruto-tairyo",
    "b": "tokushima-naruto-umago",
+   "category": "街道",
+   "confidence": 0.85,
    "types": [
-    "地理近接",
-    "街道"
+    "街道",
+    "地理近接"
    ],
-   "basis": [
-    "1km",
-    "阿波の玄関口・吉野川下流"
+   "links": [
+    {
+     "category": "街道",
+     "evidence": "両スポットの kaidou フィールドが「阿波の玄関口・吉野川下流」で一致（data/tokushima.json／data/tokushima.json）",
+     "confidence": 0.85
+    },
+    {
+     "category": "地理近接",
+     "evidence": "座標間の直線距離 0.8km（鳴門大漁節 34.173,134.609 ⇔ 鳴門馬子唄ばやし 34.168,134.615）",
+     "confidence": 0.55
+    }
    ],
    "cross": false
   },
   {
    "a": "wakayama-kouchi",
    "b": "wakayama-kushimoto",
+   "category": "街道",
+   "confidence": 0.85,
    "types": [
-    "地理近接",
-    "街道"
+    "街道",
+    "地理近接"
    ],
-   "basis": [
-    "6km",
-    "熊野古道"
+   "links": [
+    {
+     "category": "街道",
+     "evidence": "両スポットの kaidou フィールドが「熊野古道」で一致（data/wakayama.json／data/wakayama.json）",
+     "confidence": 0.85
+    },
+    {
+     "category": "地理近接",
+     "evidence": "座標間の直線距離 5.7km（串本節 33.4858,135.7869 ⇔ 河内祭の御舟行事 33.5317,135.8146）",
+     "confidence": 0.55
+    }
    ],
    "cross": false
   },
   {
    "a": "wakayama-katsuura",
    "b": "wakayama-nachi-dengaku",
+   "category": "街道",
+   "confidence": 0.85,
    "types": [
-    "地理近接",
-    "街道"
+    "街道",
+    "地理近接"
    ],
-   "basis": [
-    "0km",
-    "熊野古道"
+   "links": [
+    {
+     "category": "街道",
+     "evidence": "両スポットの kaidou フィールドが「熊野古道」で一致（data/wakayama.json／data/wakayama.json）",
+     "confidence": 0.85
+    },
+    {
+     "category": "地理近接",
+     "evidence": "座標間の直線距離 0.0km（勝浦節 33.6259,135.9411 ⇔ 那智の田楽 33.6259,135.9411）",
+     "confidence": 0.55
+    }
    ],
    "cross": false
   },
   {
    "a": "wakayama-mikan",
    "b": "wakayama-okubo-jitsuki",
+   "category": "街道",
+   "confidence": 0.85,
    "types": [
-    "地理近接",
-    "街道"
+    "街道",
+    "地理近接"
    ],
-   "basis": [
-    "7km",
-    "紀伊路"
+   "links": [
+    {
+     "category": "街道",
+     "evidence": "両スポットの kaidou フィールドが「紀伊路」で一致（data/wakayama.json／data/wakayama.json）",
+     "confidence": 0.85
+    },
+    {
+     "category": "地理近接",
+     "evidence": "座標間の直線距離 6.5km（みかん摘み唄 34.0831,135.1276 ⇔ 大窪の地搗唄 34.13,135.17）",
+     "confidence": 0.55
+    }
    ],
    "cross": false
   },
   {
    "a": "mie-kanko",
    "b": "mie-kuwana",
+   "category": "街道",
+   "confidence": 0.85,
    "types": [
     "街道"
    ],
-   "basis": [
-    "参宮街道（東海道〜伊勢）"
+   "links": [
+    {
+     "category": "街道",
+     "evidence": "両スポットの kaidou フィールドが「参宮街道（東海道〜伊勢）」で一致（data/mie.json／data/mie.json）",
+     "confidence": 0.85
+    }
    ],
    "cross": false
   },
   {
    "a": "mie-kanko",
    "b": "mie-okibiki",
+   "category": "街道",
+   "confidence": 0.85,
    "types": [
     "街道"
    ],
-   "basis": [
-    "参宮街道（東海道〜伊勢）"
+   "links": [
+    {
+     "category": "街道",
+     "evidence": "両スポットの kaidou フィールドが「参宮街道（東海道〜伊勢）」で一致（data/mie.json／data/mie.json）",
+     "confidence": 0.85
+    }
    ],
    "cross": false
   },
   {
    "a": "mie-anori",
    "b": "mie-owase",
+   "category": "街道",
+   "confidence": 0.85,
    "types": [
     "街道"
    ],
-   "basis": [
-    "熊野古道・伊勢路と志摩"
+   "links": [
+    {
+     "category": "街道",
+     "evidence": "両スポットの kaidou フィールドが「熊野古道・伊勢路と志摩」で一致（data/mie.json／data/mie.json）",
+     "confidence": 0.85
+    }
    ],
    "cross": false
   },
   {
    "a": "osaka-horie",
    "b": "osaka-katano",
+   "category": "街道",
+   "confidence": 0.85,
    "types": [
     "街道"
    ],
-   "basis": [
-    "京街道・淀川"
+   "links": [
+    {
+     "category": "街道",
+     "evidence": "両スポットの kaidou フィールドが「京街道・淀川」で一致（data/osaka.json／data/osaka.json）",
+     "confidence": 0.85
+    }
    ],
    "cross": false
   },
   {
    "a": "osaka-danjiri",
    "b": "osaka-sumiyoshi",
+   "category": "街道",
+   "confidence": 0.85,
    "types": [
     "街道"
    ],
-   "basis": [
-    "紀州街道・泉州"
+   "links": [
+    {
+     "category": "街道",
+     "evidence": "両スポットの kaidou フィールドが「紀州街道・泉州」で一致（data/osaka.json／data/osaka.json）",
+     "confidence": 0.85
+    }
    ],
    "cross": false
   },
   {
    "a": "tokushima-awaodori",
    "b": "tokushima-naruto-umago",
+   "category": "街道",
+   "confidence": 0.85,
    "types": [
     "街道"
    ],
-   "basis": [
-    "阿波の玄関口・吉野川下流"
+   "links": [
+    {
+     "category": "街道",
+     "evidence": "両スポットの kaidou フィールドが「阿波の玄関口・吉野川下流」で一致（data/tokushima.json／data/tokushima.json）",
+     "confidence": 0.85
+    }
    ],
    "cross": false
   },
   {
    "a": "tokushima-awaodori",
    "b": "tokushima-mugiuchi",
+   "category": "街道",
+   "confidence": 0.85,
    "types": [
     "街道"
    ],
-   "basis": [
-    "阿波の玄関口・吉野川下流"
+   "links": [
+    {
+     "category": "街道",
+     "evidence": "両スポットの kaidou フィールドが「阿波の玄関口・吉野川下流」で一致（data/tokushima.json／data/tokushima.json）",
+     "confidence": 0.85
+    }
    ],
    "cross": false
   },
   {
    "a": "tokushima-mugiuchi",
    "b": "tokushima-sekizoro",
+   "category": "街道",
+   "confidence": 0.85,
    "types": [
     "街道"
    ],
-   "basis": [
-    "阿波の玄関口・吉野川下流"
+   "links": [
+    {
+     "category": "街道",
+     "evidence": "両スポットの kaidou フィールドが「阿波の玄関口・吉野川下流」で一致（data/tokushima.json／data/tokushima.json）",
+     "confidence": 0.85
+    }
    ],
    "cross": false
   },
   {
    "a": "wakayama-katsuura",
    "b": "wakayama-kumanogawa-ikada",
+   "category": "街道",
+   "confidence": 0.85,
    "types": [
     "街道"
    ],
-   "basis": [
-    "熊野古道"
+   "links": [
+    {
+     "category": "街道",
+     "evidence": "両スポットの kaidou フィールドが「熊野古道」で一致（data/wakayama.json／data/wakayama.json）",
+     "confidence": 0.85
+    }
    ],
    "cross": false
   },
   {
    "a": "wakayama-kouchi",
    "b": "wakayama-nachi-dengaku",
+   "category": "街道",
+   "confidence": 0.85,
    "types": [
     "街道"
    ],
-   "basis": [
-    "熊野古道"
+   "links": [
+    {
+     "category": "街道",
+     "evidence": "両スポットの kaidou フィールドが「熊野古道」で一致（data/wakayama.json／data/wakayama.json）",
+     "confidence": 0.85
+    }
    ],
    "cross": false
   },
   {
    "a": "mie-owase",
    "b": "wakayama-kumanogawa-ikada",
+   "category": "街道",
+   "confidence": 0.8,
    "types": [
     "街道"
    ],
-   "basis": [
-    "熊野古道（県境接続）"
+   "links": [
+    {
+     "category": "街道",
+     "evidence": "kaidou が「熊野古道」（和歌山）と「熊野古道・伊勢路と志摩」（三重）で、同一古道の県境の両側",
+     "confidence": 0.8
+    }
    ],
    "cross": true
   },
   {
    "a": "mie-owase",
    "b": "wakayama-katsuura",
+   "category": "街道",
+   "confidence": 0.8,
    "types": [
     "街道"
    ],
-   "basis": [
-    "熊野古道・伊勢路"
+   "links": [
+    {
+     "category": "街道",
+     "evidence": "kaidou が「熊野古道」（和歌山）と「熊野古道・伊勢路と志摩」（三重）で、同一古道の県境の両側",
+     "confidence": 0.8
+    }
    ],
    "cross": true
   },
   {
    "a": "mie-kanko",
    "b": "nara-chabatake",
+   "category": "街道",
+   "confidence": 0.6,
    "types": [
     "街道"
    ],
-   "basis": [
-    "伊勢街道〜参宮街道"
+   "links": [
+    {
+     "category": "街道",
+     "evidence": "奈良側の kaidou は「伊勢街道」、三重側は「参宮街道」。どちらも伊勢参りの道で連続する",
+     "confidence": 0.6
+    }
    ],
    "cross": true
   },
   {
    "a": "osaka-katano",
    "b": "osaka-kawachi",
+   "category": "系譜",
+   "confidence": 0.9,
    "types": [
     "系譜"
    ],
-   "basis": [
-    "交野節は河内音頭の元節"
+   "links": [
+    {
+     "category": "系譜",
+     "evidence": "osaka.json 河内音頭の note：「江州音頭の全盛期を経て大阪で独自に発展した音頭で、元節は交野節とされる」",
+     "confidence": 0.9
+    }
    ],
    "cross": false
   },
   {
    "a": "mie-kuwana",
    "b": "mie-okibiki",
+   "category": "系譜",
+   "confidence": 0.8,
    "types": [
     "系譜"
    ],
-   "basis": [
-    "松前木遣に由来を共有"
+   "links": [
+    {
+     "category": "系譜",
+     "evidence": "mie.json 桑名の殿様の note：Wikipedia「松前木遣」に桑名の殿さんの由来が記載。木遣りの系譜を共有",
+     "confidence": 0.8
+    }
    ],
    "cross": false
   },
   {
    "a": "mie-okage",
    "b": "nara-okage",
+   "category": "系譜",
+   "confidence": 0.85,
    "types": [
     "系譜"
    ],
-   "basis": [
-    "お蔭参りの流行踊りが沿道に拡散"
+   "links": [
+    {
+     "category": "系譜",
+     "evidence": "mie.json お蔭踊りの note（KAKEN研究課題ほか）：お蔭参りの流行踊りは参りの沿道各地に広がった現象。同名の踊りが奈良・柳生にも収録（nara.json）",
+     "confidence": 0.85
+    }
    ],
    "cross": true
   },
   {
    "a": "nara-yoshino-ikada",
    "b": "tokushima-mugiuchi",
+   "category": "水系",
+   "confidence": 0.85,
    "types": [
     "水系"
    ],
-   "basis": [
-    "吉野川（上流・奈良→下流・徳島）"
+   "links": [
+    {
+     "category": "水系",
+     "evidence": "吉野川は奈良県吉野を源流域とし徳島県を流れて紀伊水道に注ぐ同一河川。上流の筏流し歌と下流域（吉野川市）の麦打唄",
+     "confidence": 0.85
+    }
    ],
    "cross": true
   },
   {
    "a": "nara-yoshino-ikada",
    "b": "tokushima-awaodori",
+   "category": "水系",
+   "confidence": 0.8,
    "types": [
     "水系"
    ],
-   "basis": [
-    "吉野川下流の文化圏"
+   "links": [
+    {
+     "category": "水系",
+     "evidence": "阿波踊りの kaidou フィールドは「阿波の玄関口・吉野川下流」。吉野川下流の文化圏",
+     "confidence": 0.8
+    }
    ],
    "cross": true
   },
   {
    "a": "wakayama-kouchi",
    "b": "wakayama-kumanogawa-ikada",
+   "category": "水系",
+   "confidence": 0.7,
    "types": [
     "水系"
    ],
-   "basis": [
-    "熊野川・古座川水系"
+   "links": [
+    {
+     "category": "水系",
+     "evidence": "熊野川と古座川は南紀の隣接水系。河内祭の御舟行事は古座川流域の川の祭り（wakayama.json note）",
+     "confidence": 0.7
+    }
    ],
    "cross": false
   },
   {
    "a": "tokushima-iya-konahiki",
    "b": "tokushima-mugiuchi",
+   "category": "水系",
+   "confidence": 0.75,
    "types": [
     "水系"
    ],
-   "basis": [
-    "祖谷川は吉野川の支流"
+   "links": [
+    {
+     "category": "水系",
+     "evidence": "祖谷川は吉野川の支流。祖谷の粉ひき唄（祖谷渓）と吉野川流域の麦打唄は同一水系",
+     "confidence": 0.75
+    }
    ],
    "cross": false
   },
   {
    "a": "nara-yoshino-ikada",
    "b": "wakayama-kumanogawa-ikada",
+   "category": "主題",
+   "confidence": 0.65,
    "types": [
     "主題"
    ],
-   "basis": [
-    "筏流し（紀伊半島の林業圏）"
+   "links": [
+    {
+     "category": "主題",
+     "evidence": "両方とも筏流しの歌（熊野川筏節の theme は「筏流し」、吉野筏流し歌は吉野川の筏流しの労働歌）。紀伊半島の林業・木材輸送圏",
+     "confidence": 0.65
+    }
    ],
    "cross": true
   },
   {
    "a": "mie-okibiki",
    "b": "nara-yoshino-kobiki",
+   "category": "主題",
+   "confidence": 0.6,
    "types": [
     "主題"
    ],
-   "basis": [
-    "木を扱う労働歌"
+   "links": [
+    {
+     "category": "主題",
+     "evidence": "木挽き（吉野木挽唄）と木曳き（お木曳木遣）― 木を扱う労働の歌",
+     "confidence": 0.6
+    }
    ],
    "cross": true
   },
   {
    "a": "osaka-sanjikkoku",
    "b": "tokushima-naruto-tairyo",
+   "category": "主題",
+   "confidence": 0.55,
    "types": [
     "主題"
    ],
-   "basis": [
-    "船と海の歌"
+   "links": [
+    {
+     "category": "主題",
+     "evidence": "淀川三十石船唄（舟歌）と鳴門大漁節 ― 船と海の歌",
+     "confidence": 0.55
+    }
    ],
    "cross": true
   },
   {
    "a": "osaka-sanjikkoku",
    "b": "wakayama-mikan",
+   "category": "主題",
+   "confidence": 0.5,
    "types": [
     "主題"
    ],
-   "basis": [
-    "船（みかん船／三十石船）"
+   "links": [
+    {
+     "category": "主題",
+     "evidence": "みかん摘み唄の歌詞「あれは紀の国みかん船」（wakayama.json note）と、淀川の三十石船の舟歌",
+     "confidence": 0.5
+    }
    ],
    "cross": true
   },
   {
    "a": "tokushima-naruto-tairyo",
    "b": "wakayama-kushimoto",
+   "category": "主題",
+   "confidence": 0.55,
    "types": [
     "主題"
    ],
-   "basis": [
-    "港と漁の歌"
+   "links": [
+    {
+     "category": "主題",
+     "evidence": "串本（漁港の町）の中心曲と鳴門の大漁節 ― 港と漁の歌",
+     "confidence": 0.55
+    }
    ],
    "cross": true
   },
   {
    "a": "nara-otaue",
    "b": "osaka-sumiyoshi",
+   "category": "主題",
+   "confidence": 0.65,
    "types": [
     "主題"
    ],
-   "basis": [
-    "御田植の神事"
+   "links": [
+    {
+     "category": "主題",
+     "evidence": "御田植歌（春日大社の御田植祭）と住吉踊り（theme は「花笠と御田植」）― 御田植の神事",
+     "confidence": 0.65
+    }
    ],
    "cross": true
   },
   {
    "a": "nara-otaue",
    "b": "wakayama-nachi-dengaku",
+   "category": "主題",
+   "confidence": 0.6,
    "types": [
     "主題"
    ],
-   "basis": [
-    "田楽・田植の神事芸能"
+   "links": [
+    {
+     "category": "主題",
+     "evidence": "御田植祭と那智の田楽 ― 田にまつわる神事芸能（田楽は田植の芸能化）",
+     "confidence": 0.6
+    }
    ],
    "cross": true
   }
@@ -958,17 +1277,18 @@
   "n_nodes": 36,
   "n_edges": 45,
   "cross_pref_edges": 13,
-  "type_count": {
-   "地理近接": 18,
-   "系譜": 4,
+  "confidence_bands": {
+   "高（0.8以上）": 28,
+   "低（0.6未満）": 10,
+   "中（0.6–0.79）": 7
+  },
+  "category_count": {
    "街道": 24,
+   "地理近接": 7,
+   "系譜": 3,
    "水系": 4,
    "主題": 7
   },
-  "components": [
-   35,
-   1
-  ],
   "hubs": [
    [
     "お木曳木遣",

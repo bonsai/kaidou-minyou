@@ -50,11 +50,13 @@
 <div id="radarWrap">
   <svg viewBox="0 0 400 400" id="radar">
     <circle class="ring" cx="200" cy="200" r="190"/>
-    <circle class="ring" cx="200" cy="200" r="127"/>
-    <circle class="ring" cx="200" cy="200" r="63"/>
-    <text class="ringLabel" x="206" y="76">20km</text>
-    <text class="ringLabel" x="206" y="139">10km</text>
-    <text class="ringLabel" x="206" y="18">30km</text>
+    <circle class="ring" cx="200" cy="200" r="142"/>
+    <circle class="ring" cx="200" cy="200" r="95"/>
+    <circle class="ring" cx="200" cy="200" r="47"/>
+    <text class="ringLabel" x="206" y="66">6里 24km</text>
+    <text class="ringLabel" x="206" y="113">4里 16km</text>
+    <text class="ringLabel" x="206" y="161">2里 8km</text>
+    <text class="ringLabel" x="206" y="18">8里 32km</text>
     <line x1="200" y1="10" x2="200" y2="390" stroke="#2e5d50" opacity=".4"/>
     <line x1="10" y1="200" x2="390" y2="200" stroke="#2e5d50" opacity=".4"/>
     <g id="sweep">
@@ -94,7 +96,10 @@ const SPOTS = [
  {id:"wakayama-okubo-jitsuki",song:"大窪の地搗唄",place:"海南市下津町大窪",lat:34.13,lng:135.17,radius_m:500,theme:"地搗き",memory:"地搗き（地固め）の労働の唄。和歌山県文化情報アーカイブに音源と歌詞全文。地搗きはイベントで実演もされる。",hint:"足元から、土を搗く音のリズム"},
  {id:"wakayama-kumanogawa-ikada",song:"熊野川筏節",place:"新宮市熊野川町",lat:33.83,lng:135.97,radius_m:500,theme:"筏流し",memory:"熊野川の筏流しの唄。山の木を川で運んだ労働の記録。",hint:"川のほうから、木の流れる気配"}
 ];
-const RANGE_KM = 30, CX = 200, CY = 200, R = 190;
+const LANDMARKS = [
+ {type:"山", name:"龍門山", lat:34.257, lng:135.385, note:"座標は概略・要検証"}
+];
+const RANGE_KM = 32, CX = 200, CY = 200, R = 190;
 const got = new Set(JSON.parse(localStorage.getItem("minyo-medals") || "[]"));
 let myPos = null, inRangeSpot = null, simOffset = null;
 
@@ -130,12 +135,26 @@ function render(){
     t.textContent = dist < 1 ? Math.round(dist*1000) + "m" : dist.toFixed(1) + "km";
     g.appendChild(t);
   }
+  for(const lm of LANDMARKS){
+    const d = haversineKm(myPos.lat, myPos.lng, lm.lat, lm.lng);
+    if(d > RANGE_KM) continue;
+    const b = bearingDeg(myPos.lat, myPos.lng, lm.lat, lm.lng) * Math.PI/180;
+    const rr = (d / RANGE_KM) * R;
+    const x = CX + rr * Math.sin(b), y = CY - rr * Math.cos(b);
+    const tri = document.createElementNS("http://www.w3.org/2000/svg","path");
+    tri.setAttribute("d", `M${x} ${y-6} L${x+6} ${y+5} L${x-6} ${y+5} Z`);
+    tri.setAttribute("fill","none"); tri.setAttribute("stroke","#7fae9d"); tri.setAttribute("stroke-width","1.2");
+    g.appendChild(tri);
+    const lt = document.createElementNS("http://www.w3.org/2000/svg","text");
+    lt.setAttribute("x", x+9); lt.setAttribute("y", y+3); lt.setAttribute("class","ringLabel");
+    lt.textContent = lm.name; g.appendChild(lt);
+  }
   const newIn = best && best._dist * 1000 <= best.radius_m ? best : null;
   if(newIn && (!inRangeSpot || inRangeSpot.id !== newIn.id)) enterRange(newIn);
   if(!newIn && inRangeSpot) exitRange();
   if(best){
     nearest.textContent = inRangeSpot ? "" : "いちばん近い気配まで " + (best._dist < 1 ? Math.round(best._dist*1000)+"m" : best._dist.toFixed(1)+"km");
-    if(!inRangeSpot) status.textContent = best._dist <= RANGE_KM ? best.hint : "レーダーの輪（30km）の外。もっと近づくと何か出てくる";
+    if(!inRangeSpot) status.textContent = best._dist <= RANGE_KM ? best.hint : "レーダーの輪（8里）の外。もっと近づくと何か出てくる";
   }
   renderMedals();
 }

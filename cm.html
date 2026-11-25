@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>民謡レーダー CM（30秒・投資家向け）</title>
+<style>
+  :root{ color-scheme: dark; }
+  body{ margin:0; background:#050b14; color:#e8e0c8; font-family:"Hiragino Mincho ProN","Yu Mincho",serif; display:flex; flex-direction:column; align-items:center; min-height:100vh; }
+  #stage{ position:relative; width:min(94vw,760px); aspect-ratio:16/9; margin-top:18px; background:radial-gradient(circle at 50% 45%, #0d2136 0%, #050b14 72%); border:1px solid #23405a; border-radius:14px; overflow:hidden; }
+  svg{ position:absolute; inset:0; width:100%; height:100%; }
+  #sweep{ transform-origin:200px 200px; animation:spin 8s linear infinite; }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+  .scene{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; flex-direction:column; opacity:0; transition:opacity .6s; pointer-events:none; }
+  .scene.on{ opacity:1; }
+  #telop{ position:absolute; left:0; right:0; bottom:9%; text-align:center; font-size:clamp(16px,3.4vw,26px); letter-spacing:.06em; text-shadow:0 2px 10px #000; padding:0 20px; line-height:1.6; }
+  .medal3d{ width:110px; height:110px; border-radius:50%; background:radial-gradient(circle at 35% 30%, #ffe9a8, #b8860b); color:#241a00; display:flex; align-items:center; justify-content:center; font-size:44px; animation:coin 2.6s ease-in-out infinite; box-shadow:0 10px 34px rgba(255,200,60,.35); font-family:"Hiragino Mincho ProN",serif; }
+  @keyframes coin{ 0%{ transform:rotateY(0deg);} 50%{ transform:rotateY(180deg);} 100%{ transform:rotateY(360deg);} }
+  .medalRow{ display:flex; gap:10px; }
+  .mini{ width:52px; height:52px; border-radius:50%; background:radial-gradient(circle at 35% 30%, #ffe9a8, #b8860b); display:flex; align-items:center; justify-content:center; font-size:20px; color:#241a00; animation:coin 3s ease-in-out infinite; }
+  #shelf{ display:grid; grid-template-columns:repeat(10,1fr); gap:6px; width:78%; }
+  .cell{ aspect-ratio:1; border-radius:50%; border:1px solid #c9a227; display:flex; align-items:center; justify-content:center; font-size:10px; color:#ffcf90; opacity:.25; }
+  .cell.lit{ opacity:1; background:radial-gradient(circle at 35% 30%, #ffe9a8, #8a6408); color:#241a00; transition:opacity .3s; }
+  #endcard h1{ font-size:clamp(26px,5.4vw,44px); letter-spacing:.28em; margin:0; }
+  #endcard p{ letter-spacing:.14em; opacity:.9; }
+  #endcard .udc{ margin-top:14px; font-family:sans-serif; font-size:12.5px; border:1px solid #557; padding:5px 12px; border-radius:999px; opacity:.85; }
+  #playBtn{ margin:16px; background:#c9a227; color:#141c14; border:none; border-radius:999px; padding:13px 34px; font-size:17px; font-weight:700; font-family:sans-serif; cursor:pointer; }
+  .note{ font-size:12.5px; opacity:.65; font-family:sans-serif; padding:0 16px 26px; text-align:center; line-height:1.7; }
+  body.playing #stage{ animation:none; }
+  #pulse{ position:absolute; inset:0; border-radius:14px; pointer-events:none; }
+  body.inrange #pulse{ animation:pl .5s ease-in-out infinite alternate; }
+  @keyframes pl{ from{ box-shadow:inset 0 0 0 rgba(255,184,92,0);} to{ box-shadow:inset 0 0 64px rgba(255,184,92,.45);} }
+</style>
+</head>
+<body>
+<div id="stage">
+  <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
+    <circle cx="200" cy="200" r="190" fill="none" stroke="#2e5d50"/>
+    <circle cx="200" cy="200" r="142" fill="none" stroke="#2e5d50" opacity=".7"/>
+    <circle cx="200" cy="200" r="95" fill="none" stroke="#2e5d50" opacity=".55"/>
+    <circle cx="200" cy="200" r="47" fill="none" stroke="#2e5d50" opacity=".4"/>
+    <g id="sweep">
+      <path d="M200 200 L200 10 A190 190 0 0 1 295 35 Z" fill="rgba(110,231,183,.16)"/>
+      <line x1="200" y1="200" x2="200" y2="10" stroke="#6ee7b7" stroke-width="2"/>
+    </g>
+    <g id="dots"></g>
+    <circle cx="200" cy="200" r="5" fill="#e8e0c8"/>
+  </svg>
+  <div id="pulse"></div>
+  <div class="scene" id="sc-medal"><div class="medal3d">唄</div></div>
+  <div class="scene" id="sc-seven"><div class="medalRow" id="medalRow"></div></div>
+  <div class="scene" id="sc-shelf"><div id="shelf"></div></div>
+  <div class="scene" id="endcard">
+    <h1>民謡レーダー</h1>
+    <p>土地の記憶に、気づく旅を。</p>
+    <div class="udc">アーバンデータチャレンジ2026 本応募</div>
+  </div>
+  <div id="telop"></div>
+</div>
+<button id="playBtn">▶ CMを再生（約28秒）</button>
+<audio id="narration" src="cm/narration.mp3" preload="auto"></audio>
+<p class="note">投資家向け30秒CM・ラフ版。映像はSVGアニメーション＋3Dメダル表現。ナレーション：avocado_v2:rumi（原稿 v3）。</p>
+<script>
+const T = 27.8;
+const LINES = [
+  { until: 0.16, text: "どの土地にも、その土地だけの歌が眠っています。" },
+  { until: 0.28, text: "その記憶が、いま、鳴り始めます。" },
+  { until: 0.52, text: "民謡レーダー。歩いていると、近くの民謡にそっと反応するアプリです。" },
+  { until: 0.68, text: "圏内に入れば歌が聴こえ、メダルが集まります。" },
+  { until: 0.78, text: "七つ集めれば、県のバッジ。" },
+  { until: 0.90, text: "四十七県、すべての土地に歌があります。" },
+  { until: 1.01, text: "消えゆく無形文化遺産を、歩く理由に変えていきます。" }
+];
+const DOTPOS = [ [290,120],[120,150],[250,270],[150,290],[320,220],[90,230] ];
+const dotsG = document.getElementById("dots");
+DOTPOS.forEach(([x,y],i)=>{
+  const c = document.createElementNS("http://www.w3.org/2000/svg","circle");
+  c.setAttribute("cx",x); c.setAttribute("cy",y); c.setAttribute("r",8);
+  c.setAttribute("fill","#ffb85c"); c.setAttribute("opacity","0"); c.id = "dot"+i;
+  dotsG.appendChild(c);
+  const t = document.createElementNS("http://www.w3.org/2000/svg","text");
+  t.setAttribute("x",x+13); t.setAttribute("y",y+4); t.setAttribute("fill","#ffcf90");
+  t.setAttribute("font-size","12"); t.setAttribute("opacity","0"); t.id = "dt"+i;
+  t.textContent = (2.4 + i*3.7).toFixed(1) + "km";
+  dotsG.appendChild(t);
+});
+const row = document.getElementById("medalRow");
+for(let i=0;i<7;i++){ const d=document.createElement("div"); d.className="mini"; d.textContent="唄"; d.style.animationDelay=(i*0.15)+"s"; row.appendChild(d); }
+const shelf = document.getElementById("shelf");
+for(let i=0;i<47;i++){ const d=document.createElement("div"); d.className="cell"; d.textContent="県"; shelf.appendChild(d); }
+
+const audio = document.getElementById("narration");
+const telop = document.getElementById("telop");
+function scene(id, on){ document.getElementById(id).classList.toggle("on", on); }
+function tick(){
+  const f = audio.currentTime / T;
+  let line = LINES[LINES.length-1];
+  for(const L of LINES){ if(f <= L.until){ line = L; break; } }
+  telop.textContent = line.text;
+  DOTPOS.forEach((_,i)=>{
+    const on = f > 0.16 + i*0.02;
+    document.getElementById("dot"+i).setAttribute("opacity", on ? "1" : "0");
+    document.getElementById("dt"+i).setAttribute("opacity", on ? "1" : "0");
+  });
+  document.body.classList.toggle("inrange", f > 0.52 && f < 0.68);
+  scene("sc-medal", f > 0.56 && f < 0.70);
+  scene("sc-seven", f >= 0.70 && f < 0.79);
+  scene("sc-shelf", f >= 0.79 && f < 0.90);
+  if(f >= 0.79){ const n = Math.floor((f-0.79)/0.11*47); [...shelf.children].forEach((c,i)=>c.classList.toggle("lit", i<n)); }
+  scene("endcard", f >= 0.90);
+  if(!audio.ended) requestAnimationFrame(tick);
+}
+document.getElementById("playBtn").addEventListener("click", async ()=>{
+  document.getElementById("playBtn").style.display = "none";
+  document.body.classList.add("playing");
+  try{ await audio.play(); }catch(e){}
+  tick();
+});
+audio.addEventListener("ended", ()=>{ telop.textContent = ""; });
+</script>
+</body>
+</html>

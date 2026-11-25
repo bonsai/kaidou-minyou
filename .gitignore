@@ -1,0 +1,4 @@
+src/node_modules/
+src/android/app/build/
+src/android/build/
+src/android/.gradle/

@@ -1,1 +1,157 @@
-{"dataset":"kaidou-minyou / wakayama","note":"位置ゲーム用スポットデータ（下書き・未push）。coord_accuracy: geocoded=座標取得済み / area=地名・町レベルの概略（要検証）。奈良版 data/nara.json と同じ形式。出典：Spotifyプレイリスト「和歌山民謡 総覧」（11曲、串本節中心）、YouTube検証済み動画5本（勝浦節＝aki tenten ほか）、和歌山県公式・県立アーカイブ（有田みかん摘み唄の歌詞ページ、文化財目録の那智の田楽・河内祭）。未収録：地搗唄・筏節（見つからず）、白浜節（沖縄の同名曲と区別して除外）。","prefecture":"和歌山県","routes":[{"id":"kumano-kodo","name":"熊野古道","note":"紀伊半島の南海岸をたどる古道。串本→古座川→勝浦→那智と、民謡と祭りの地が連なる。","spots":["wakayama-kushimoto","wakayama-kouchi","wakayama-katsuura","wakayama-nachi-dengaku"]},{"id":"kii-ji","name":"紀伊路","note":"和歌山市から有田・田辺・新宮へ至る海岸の街道。いまはみかん摘み唄1件だけの種。田辺・日高方面の民謡が見つかれば足す。","spots":["wakayama-mikan"]}],"spots":[{"category":"民謡","coord_accuracy":"area","id":"wakayama-kushimoto","kaidou":"熊野古道","lat":33.4858,"lng":135.7869,"municipality":"東牟婁郡串本町","note":"和歌山民謡の中心曲。Spotify「和歌山民謡 総覧」11曲の大半が串本節の異唱（民謡クルセイダーズ、美空ひばり、都はるみ ほか）。","place":"串本町","points":10,"radius_m":500,"reading":"くしもとぶし","song":"串本節"},{"category":"民謡","coord_accuracy":"area","id":"wakayama-katsuura","kaidou":"熊野古道","lat":33.6259,"lng":135.9411,"municipality":"東牟婁郡那智勝浦町","note":"aki tenten（高橋亜紀、トロントの民謡ユニット ten ten）の勝浦節動画が検証済み。勝浦節は aki tenten の動画がなければ見つからなかった曲。","place":"那智勝浦町","points":10,"radius_m":500,"reading":"かつうらぶし","song":"勝浦節"},{"category":"労働歌","coord_accuracy":"area","id":"wakayama-mikan","kaidou":"紀伊路","lat":34.0831,"lng":135.1276,"municipality":"有田市","note":"有田みかん摘み唄。県立アーカイブに歌詞ページあり（「沖の暗いのに白帆が見える／あれは紀の国みかん船」）。ユーザーが今まさに下津でみかんを摘んでいる唄。場所は唄の本拠・有田に置く。","place":"有田","points":10,"radius_m":500,"reading":"みかんつみうた","song":"みかん摘み唄"},{"category":"祭り・芸能","coord_accuracy":"area","id":"wakayama-nachi-dengaku","kaidou":"熊野古道","lat":33.6259,"lng":135.9411,"municipality":"東牟婁郡那智勝浦町","note":"那智の田楽・那智の扇祭りに関わる場所。座標は町レベルの概略（大社ピンポイントは未取得）。出典：和歌山県文化財目録。","place":"熊野那智大社","points":10,"radius_m":500,"reading":"なちのでんがく","song":"那智の田楽"},{"category":"祭り","coord_accuracy":"area","id":"wakayama-kouchi","kaidou":"熊野古道","lat":33.5317,"lng":135.8146,"municipality":"東牟婁郡古座川町","note":"河内祭の御舟行事が伝承される古座川流域。座標は町レベルの概略。出典：和歌山県文化財目録。","place":"古座川","points":10,"radius_m":500,"reading":"こうちまつりのおふねぎょうじ","song":"河内祭の御舟行事"}],"version":"2026-11-25 draft"}
+{
+ "dataset": "kaidou-minyou / wakayama",
+ "note": "位置ゲーム用スポットデータ（下書き・未push）。coord_accuracy: geocoded=座標取得済み / area=地名・町レベルの概略（要検証）。奈良版 data/nara.json と同じ形式。出典：Spotifyプレイリスト「和歌山民謡 総覧」（11曲、串本節中心）、YouTube検証済み動画5本（勝浦節＝aki tenten ほか）、和歌山県公式・県立アーカイブ（有田みかん摘み唄の歌詞ページ、文化財目録の那智の田楽・河内祭）。地搗唄＝大窪の地搗唄、筏節＝熊野川筏節として収録（2026-11-25、Issue #1）。白浜節（沖縄の同名曲と区別して除外）。",
+ "prefecture": "和歌山県",
+ "routes": [
+  {
+   "id": "kumano-kodo",
+   "name": "熊野古道",
+   "note": "紀伊半島の南海岸をたどる古道。串本→古座川→勝浦→那智と、民謡と祭りの地が連なる。",
+   "spots": [
+    "wakayama-kushimoto",
+    "wakayama-kouchi",
+    "wakayama-katsuura",
+    "wakayama-nachi-dengaku",
+    "wakayama-kumanogawa-ikada"
+   ]
+  },
+  {
+   "id": "kii-ji",
+   "name": "紀伊路",
+   "note": "和歌山市から有田・田辺・新宮へ至る海岸の街道。いまはみかん摘み唄1件だけの種。田辺・日高方面の民謡が見つかれば足す。",
+   "spots": [
+    "wakayama-mikan",
+    "wakayama-okubo-jitsuki"
+   ]
+  }
+ ],
+ "spots": [
+  {
+   "category": "民謡",
+   "coord_accuracy": "area",
+   "id": "wakayama-kushimoto",
+   "kaidou": "熊野古道",
+   "lat": 33.4858,
+   "lng": 135.7869,
+   "municipality": "東牟婁郡串本町",
+   "note": "和歌山民謡の中心曲。Spotify「和歌山民謡 総覧」11曲の大半が串本節の異唱（民謡クルセイダーズ、美空ひばり、都はるみ ほか）。",
+   "place": "串本町",
+   "points": 10,
+   "radius_m": 500,
+   "reading": "くしもとぶし",
+   "song": "串本節",
+   "theme": "漁船と港",
+   "memory": "本州最南端の港町・串本。漁と行き交う人の唄。",
+   "hint": "海のほうから、賑やかな唄が聞こえる"
+  },
+  {
+   "category": "民謡",
+   "coord_accuracy": "area",
+   "id": "wakayama-katsuura",
+   "kaidou": "熊野古道",
+   "lat": 33.6259,
+   "lng": 135.9411,
+   "municipality": "東牟婁郡那智勝浦町",
+   "note": "aki tenten（高橋亜紀、トロントの民謡ユニット ten ten）の勝浦節動画が検証済み。勝浦節は aki tenten の動画がなければ見つからなかった曲。",
+   "place": "那智勝浦町",
+   "points": 10,
+   "radius_m": 500,
+   "reading": "かつうらぶし",
+   "song": "勝浦節",
+   "theme": "港と鮪",
+   "memory": "勝浦の港の唄。遠くトロントの民謡ユニットの動画で再発見された。",
+   "hint": "港のほうに、唄の気配"
+  },
+  {
+   "category": "労働歌",
+   "coord_accuracy": "area",
+   "id": "wakayama-mikan",
+   "kaidou": "紀伊路",
+   "lat": 34.0831,
+   "lng": 135.1276,
+   "municipality": "有田市",
+   "note": "有田みかん摘み唄。県立アーカイブに歌詞ページあり（「沖の暗いのに白帆が見える／あれは紀の国みかん船」）。ユーザーが今まさに下津でみかんを摘んでいる唄。場所は唄の本拠・有田に置く。",
+   "place": "有田",
+   "points": 10,
+   "radius_m": 500,
+   "reading": "みかんつみうた",
+   "song": "みかん摘み唄",
+   "theme": "みかん籠",
+   "memory": "有田みかんの摘み唄。県のアーカイブに歌詞が残る。",
+   "hint": "畑のほうから、手仕事の唄"
+  },
+  {
+   "category": "祭り・芸能",
+   "coord_accuracy": "area",
+   "id": "wakayama-nachi-dengaku",
+   "kaidou": "熊野古道",
+   "lat": 33.6259,
+   "lng": 135.9411,
+   "municipality": "東牟婁郡那智勝浦町",
+   "note": "那智の田楽・那智の扇祭りに関わる場所。座標は町レベルの概略（大社ピンポイントは未取得）。出典：和歌山県文化財目録。",
+   "place": "熊野那智大社",
+   "points": 10,
+   "radius_m": 500,
+   "reading": "なちのでんがく",
+   "song": "那智の田楽",
+   "theme": "扇と田楽",
+   "memory": "那智の田楽。扇祭りで知られる那智大社の芸能。",
+   "hint": "祭りの音が近づいてくる"
+  },
+  {
+   "category": "祭り",
+   "coord_accuracy": "area",
+   "id": "wakayama-kouchi",
+   "kaidou": "熊野古道",
+   "lat": 33.5317,
+   "lng": 135.8146,
+   "municipality": "東牟婁郡古座川町",
+   "note": "河内祭の御舟行事が伝承される古座川流域。座標は町レベルの概略。出典：和歌山県文化財目録。",
+   "place": "古座川",
+   "points": 10,
+   "radius_m": 500,
+   "reading": "こうちまつりのおふねぎょうじ",
+   "song": "河内祭の御舟行事",
+   "theme": "御舟",
+   "memory": "河内祭の御舟行事。熊野の海の祭り。",
+   "hint": "海の祭りの気配"
+  },
+  {
+   "id": "wakayama-okubo-jitsuki",
+   "song": "大窪の地搗唄",
+   "reading": "おおくぼのじつきうた",
+   "category": "民謡",
+   "kaidou": "紀伊路",
+   "place": "下津町大窪",
+   "municipality": "海南市下津町大窪",
+   "lat": 34.13,
+   "lng": 135.17,
+   "coord_accuracy": "area",
+   "radius_m": 500,
+   "points": 10,
+   "theme": "地搗き",
+   "memory": "地搗き（地固め）の労働の唄。和歌山県文化情報アーカイブに音源と歌詞全文。地搗きはイベントで実演もされる。",
+   "hint": "足元から、土を搗く音のリズム",
+   "note": "実在確認済み（県文化情報アーカイブ専用ページ、県民謡連合会CD「紀州民謡」収録）。座標は町レベル概略・要検証。"
+  },
+  {
+   "id": "wakayama-kumanogawa-ikada",
+   "song": "熊野川筏節",
+   "reading": "くまのがわいかだぶし",
+   "category": "民謡",
+   "kaidou": "熊野古道",
+   "place": "熊野川町",
+   "municipality": "新宮市熊野川町",
+   "lat": 33.83,
+   "lng": 135.97,
+   "coord_accuracy": "area",
+   "radius_m": 500,
+   "points": 10,
+   "theme": "筏流し",
+   "memory": "熊野川の筏流しの唄。山の木を川で運んだ労働の記録。",
+   "hint": "川のほうから、木の流れる気配",
+   "note": "実在確認済み（県文化情報アーカイブ、県民謡連合会CD収録）。座標は町レベル概略・要検証。"
+  }
+ ],
+ "version": "2026-11-25 draft"
+}

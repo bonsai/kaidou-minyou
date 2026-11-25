@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>民謡ネットワーク ― 5県36スポット｜民謡レーダー</title>
+<style>
+  body { margin:0; background:#0d1b2a; color:#eaf2f8; font-family:sans-serif; }
+  main { max-width:1100px; margin:0 auto; padding:20px 16px 48px; }
+  h1 { font-size:22px; margin:8px 0 4px; }
+  p.lead { color:#9fb3c8; font-size:14px; line-height:1.7; }
+  img.net { width:100%; height:auto; border:1px solid #24405c; border-radius:8px; }
+  h2 { font-size:17px; margin:28px 0 8px; }
+  ul { line-height:1.9; font-size:14.5px; }
+  a { color:#7fd1c0; }
+  .num { color:#ffd166; font-weight:bold; }
+</style>
+</head>
+<body>
+<main>
+  <h1>民謡ネットワーク ― 5県36スポット</h1>
+  <p class="lead">スポット同士の「つながり」を、街道・水系・系譜・主題・地理近接の5つの規則でデータから類推した図。配置は地理そのもの。県をまたぐ線は太く描いてある。詳しい方法と読み解きは <a href="https://github.com/bonsai/kaidou-minyou/blob/main/doc/network-analysis.md">doc/network-analysis.md</a>、元データは <a href="https://github.com/bonsai/kaidou-minyou/blob/main/data/network.json">data/network.json</a>。</p>
+  <img class="net" src="doc/network.svg" alt="民謡ネットワーク図">
+  <h2>読み取れたこと</h2>
+  <ul>
+    <li>つながりは全<span class="num">45</span>本、そのうち県をまたぐのは<span class="num">13</span>本（約29%）</li>
+    <li>背骨は街道（24本）― 徒歩ロジーの裏付け</li>
+    <li>ハブは お木曳木遣（三重）と 御田植歌（奈良）。観光の歌ではなく、労働と神事の歌が中心に来る</li>
+    <li>吉野筏流し歌は水系の橋 ― 吉野川を下って徳島の麦打唄・阿波踊りへ</li>
+    <li>孤立は1件だけ：三輪素麺掛け唄（山の辺の道の補強候補）</li>
+  </ul>
+  <p class="lead"><a href="./">民謡レーダー 企画ページへ</a>／<a href="region-map.html">5県全図</a>／<a href="app.html">Web版レーダー</a></p>
+</main>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" font-family="sans-serif">
+<rect width="100%" height="100%" fill="#0d1b2a"/>
+<text x="24" y="38" fill="#eaf2f8" font-size="23" font-weight="bold">民謡ネットワーク ― 5県36スポット</text>
+<text x="24" y="63" fill="#9fb3c8" font-size="13">配置は地理そのもの／線の色＝つながりの種類／県をまたぐ線は太く表示／丸の大きさ＝つながりの数</text>
+<line x1="1205" y1="399" x2="1207" y2="398" stroke="#ef476f" stroke-width="1.2" opacity="0.5"/>
+<line x1="1205" y1="399" x2="1212" y2="413" stroke="#2ec4b6" stroke-width="1.2" opacity="0.5"/>
+<line x1="1212" y1="413" x2="1207" y2="398" stroke="#5b6b7f" stroke-width="1.2" opacity="0.5"/>
+<line x1="935" y1="289" x2="874" y2="311" stroke="#5b6b7f" stroke-width="1.2" opacity="0.5"/>
+<line x1="855" y1="289" x2="874" y2="311" stroke="#5b6b7f" stroke-width="1.2" opacity="0.5"/>
+<line x1="842" y1="328" x2="874" y2="311" stroke="#5b6b7f" stroke-width="1.2" opacity="0.5"/>
+<line x1="935" y1="289" x2="855" y2="289" stroke="#2ec4b6" stroke-width="1.2" opacity="0.5"/>
+<line x1="868" y1="428" x2="948" y2="428" stroke="#2ec4b6" stroke-width="1.2" opacity="0.5"/>
+<line x1="778" y1="340" x2="737" y2="343" stroke="#5b6b7f" stroke-width="1.2" opacity="0.5"/>
+<line x1="808" y1="263" x2="798" y2="251" stroke="#2ec4b6" stroke-width="1.2" opacity="0.5"/>
+<line x1="735" y1="316" x2="737" y2="343" stroke="#5b6b7f" stroke-width="1.2" opacity="0.5"/>
+<line x1="690" y1="411" x2="696" y2="436" stroke="#2ec4b6" stroke-width="1.2" opacity="0.5"/>
+<line x1="377" y1="587" x2="379" y2="589" stroke="#5b6b7f" stroke-width="1.2" opacity="0.5"/>
+<line x1="102" y1="645" x2="100" y2="648" stroke="#2ec4b6" stroke-width="1.2" opacity="0.5"/>
+<line x1="397" y1="540" x2="400" y2="543" stroke="#2ec4b6" stroke-width="1.2" opacity="0.5"/>
+<line x1="861" y1="829" x2="850" y2="850" stroke="#2ec4b6" stroke-width="1.2" opacity="0.5"/>
+<line x1="950" y1="787" x2="870" y2="787" stroke="#2ec4b6" stroke-width="1.2" opacity="0.5"/>
+<line x1="597" y1="581" x2="613" y2="560" stroke="#2ec4b6" stroke-width="1.2" opacity="0.5"/>
+<line x1="1086" y1="222" x2="1195" y2="140" stroke="#2ec4b6" stroke-width="1.2" opacity="0.5"/>
+<line x1="1086" y1="222" x2="1207" y2="398" stroke="#2ec4b6" stroke-width="1.2" opacity="0.5"/>
+<line x1="1280" y1="458" x2="1006" y2="587" stroke="#2ec4b6" stroke-width="1.2" opacity="0.5"/>
+<line x1="735" y1="316" x2="808" y2="263" stroke="#2ec4b6" stroke-width="1.2" opacity="0.5"/>
+<line x1="690" y1="411" x2="737" y2="343" stroke="#2ec4b6" stroke-width="1.2" opacity="0.5"/>
+<line x1="377" y1="587" x2="400" y2="543" stroke="#2ec4b6" stroke-width="1.2" opacity="0.5"/>
+<line x1="377" y1="587" x2="301" y2="589" stroke="#2ec4b6" stroke-width="1.2" opacity="0.5"/>
+<line x1="301" y1="589" x2="379" y2="589" stroke="#2ec4b6" stroke-width="1.2" opacity="0.5"/>
+<line x1="950" y1="787" x2="921" y2="695" stroke="#2ec4b6" stroke-width="1.2" opacity="0.5"/>
+<line x1="861" y1="829" x2="870" y2="787" stroke="#2ec4b6" stroke-width="1.2" opacity="0.5"/>
+<line x1="1006" y1="587" x2="921" y2="695" stroke="#2ec4b6" stroke-width="2.8" opacity="0.95"/>
+<line x1="1006" y1="587" x2="950" y2="787" stroke="#2ec4b6" stroke-width="2.8" opacity="0.95"/>
+<line x1="1086" y1="222" x2="915" y2="346" stroke="#2ec4b6" stroke-width="2.8" opacity="0.95"/>
+<line x1="808" y1="263" x2="778" y2="340" stroke="#ef476f" stroke-width="1.2" opacity="0.5"/>
+<line x1="1195" y1="140" x2="1207" y2="398" stroke="#ef476f" stroke-width="1.2" opacity="0.5"/>
+<line x1="1212" y1="413" x2="855" y2="289" stroke="#ef476f" stroke-width="2.8" opacity="0.95"/>
+<line x1="868" y1="428" x2="301" y2="589" stroke="#118ab2" stroke-width="2.8" opacity="0.95"/>
+<line x1="868" y1="428" x2="377" y2="587" stroke="#118ab2" stroke-width="2.8" opacity="0.95"/>
+<line x1="861" y1="829" x2="921" y2="695" stroke="#118ab2" stroke-width="1.2" opacity="0.5"/>
+<line x1="100" y1="648" x2="301" y2="589" stroke="#118ab2" stroke-width="1.2" opacity="0.5"/>
+<line x1="868" y1="428" x2="921" y2="695" stroke="#8338ec" stroke-width="2.8" opacity="0.95"/>
+<line x1="1207" y1="398" x2="948" y2="428" stroke="#8338ec" stroke-width="2.8" opacity="0.95"/>
+<line x1="798" y1="251" x2="397" y2="540" stroke="#8338ec" stroke-width="2.8" opacity="0.95"/>
+<line x1="798" y1="251" x2="597" y2="581" stroke="#8338ec" stroke-width="2.8" opacity="0.95"/>
+<line x1="397" y1="540" x2="850" y2="850" stroke="#8338ec" stroke-width="2.8" opacity="0.95"/>
+<line x1="874" y1="311" x2="737" y2="343" stroke="#8338ec" stroke-width="2.8" opacity="0.95"/>
+<line x1="874" y1="311" x2="870" y2="787" stroke="#8338ec" stroke-width="2.8" opacity="0.95"/>
+<circle cx="1205" cy="399" r="9" fill="#f15bb5" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="1171" y="385" fill="#eaf2f8" font-size="12" text-anchor="middle">伊勢音頭</text>
+<circle cx="1207" cy="398" r="14" fill="#f15bb5" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="1245" y="426" fill="#eaf2f8" font-size="12" text-anchor="middle">お木曳木遣</text>
+<circle cx="1212" cy="413" r="11" fill="#f15bb5" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="1212" y="439" fill="#eaf2f8" font-size="12" text-anchor="middle">お蔭踊り</text>
+<circle cx="1006" cy="587" r="11" fill="#f15bb5" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="1006" y="571" fill="#eaf2f8" font-size="12" text-anchor="middle">尾鷲節</text>
+<circle cx="1195" cy="140" r="9" fill="#f15bb5" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="1195" y="126" fill="#eaf2f8" font-size="12" text-anchor="middle">桑名の殿様</text>
+<circle cx="1086" cy="222" r="11" fill="#f15bb5" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="1086" y="206" fill="#eaf2f8" font-size="12" text-anchor="middle">かんこ踊り（羯鼓踊）</text>
+<circle cx="1280" cy="458" r="8" fill="#f15bb5" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="1280" y="445" fill="#eaf2f8" font-size="12" text-anchor="middle">安乗の人形芝居</text>
+<circle cx="874" cy="311" r="14" fill="#7fb069" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="834" y="340" fill="#eaf2f8" font-size="12" text-anchor="middle">御田植歌</text>
+<circle cx="935" cy="289" r="9" fill="#7fb069" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="969" y="312" fill="#eaf2f8" font-size="12" text-anchor="middle">麻布晒し唄</text>
+<circle cx="855" cy="289" r="11" fill="#7fb069" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="855" y="314" fill="#eaf2f8" font-size="12" text-anchor="middle">お蔭踊</text>
+<circle cx="874" cy="382" r="6" fill="#7fb069" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="874" y="402" fill="#eaf2f8" font-size="12" text-anchor="middle">三輪素麺掛け唄</text>
+<circle cx="842" cy="328" r="8" fill="#7fb069" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="842" y="349" fill="#eaf2f8" font-size="12" text-anchor="middle">金魚音頭</text>
+<circle cx="948" cy="428" r="9" fill="#7fb069" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="948" y="452" fill="#eaf2f8" font-size="12" text-anchor="middle">吉野木挽唄</text>
+<circle cx="868" cy="428" r="13" fill="#7fb069" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="868" y="410" fill="#eaf2f8" font-size="12" text-anchor="middle">吉野筏流し歌</text>
+<circle cx="915" cy="346" r="8" fill="#7fb069" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="915" y="367" fill="#eaf2f8" font-size="12" text-anchor="middle">茶摘み唄</text>
+<circle cx="778" cy="340" r="9" fill="#4d96ff" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="818" y="364" fill="#eaf2f8" font-size="12" text-anchor="middle">河内音頭</text>
+<circle cx="808" cy="263" r="11" fill="#4d96ff" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="808" y="289" fill="#eaf2f8" font-size="12" text-anchor="middle">交野節</text>
+<circle cx="737" cy="343" r="13" fill="#4d96ff" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="695" y="370" fill="#eaf2f8" font-size="12" text-anchor="middle">住吉踊り</text>
+<circle cx="735" cy="316" r="9" fill="#4d96ff" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="735" y="301" fill="#eaf2f8" font-size="12" text-anchor="middle">大阪盆踊歌（堀江盆踊唄）</text>
+<circle cx="798" cy="251" r="11" fill="#4d96ff" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="798" y="235" fill="#eaf2f8" font-size="12" text-anchor="middle">淀川三十石船唄</text>
+<circle cx="690" cy="411" r="9" fill="#4d96ff" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="690" y="397" fill="#eaf2f8" font-size="12" text-anchor="middle">地車囃子（だんじり囃子）</text>
+<circle cx="696" cy="436" r="8" fill="#4d96ff" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="696" y="458" fill="#eaf2f8" font-size="12" text-anchor="middle">千本搗餅搗唄</text>
+<circle cx="377" cy="587" r="13" fill="#9b5de5" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="377" y="614" fill="#eaf2f8" font-size="12" text-anchor="middle">阿波踊り（よしこの節）</text>
+<circle cx="379" cy="589" r="9" fill="#9b5de5" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="345" y="612" fill="#eaf2f8" font-size="12" text-anchor="middle">せきぞろ（節季候）</text>
+<circle cx="301" cy="589" r="13" fill="#9b5de5" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="301" y="571" fill="#eaf2f8" font-size="12" text-anchor="middle">徳島麦打唄</text>
+<circle cx="100" cy="648" r="9" fill="#9b5de5" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="100" y="633" fill="#eaf2f8" font-size="12" text-anchor="middle">祖谷の粉ひき唄</text>
+<circle cx="102" cy="645" r="8" fill="#9b5de5" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="102" y="667" fill="#eaf2f8" font-size="12" text-anchor="middle">祖谷甚句</text>
+<circle cx="397" cy="540" r="11" fill="#9b5de5" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="397" y="524" fill="#eaf2f8" font-size="12" text-anchor="middle">鳴門大漁節</text>
+<circle cx="400" cy="543" r="9" fill="#9b5de5" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="400" y="566" fill="#eaf2f8" font-size="12" text-anchor="middle">鳴門馬子唄ばやし</text>
+<circle cx="850" cy="850" r="9" fill="#e8833a" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="850" y="836" fill="#eaf2f8" font-size="12" text-anchor="middle">串本節</text>
+<circle cx="950" cy="787" r="11" fill="#e8833a" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="950" y="812" fill="#eaf2f8" font-size="12" text-anchor="middle">勝浦節</text>
+<circle cx="597" cy="581" r="9" fill="#e8833a" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="597" y="567" fill="#eaf2f8" font-size="12" text-anchor="middle">みかん摘み唄</text>
+<circle cx="870" cy="787" r="11" fill="#e8833a" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="870" y="771" fill="#eaf2f8" font-size="12" text-anchor="middle">那智の田楽</text>
+<circle cx="861" cy="829" r="11" fill="#e8833a" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="845" y="854" fill="#eaf2f8" font-size="12" text-anchor="middle">河内祭の御舟行事</text>
+<circle cx="613" cy="560" r="8" fill="#e8833a" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="613" y="582" fill="#eaf2f8" font-size="12" text-anchor="middle">大窪の地搗唄</text>
+<circle cx="921" cy="695" r="13" fill="#e8833a" stroke="#0d1b2a" stroke-width="1.5"/>
+<text x="921" y="677" fill="#eaf2f8" font-size="12" text-anchor="middle">熊野川筏節</text>
+<line x1="24" y1="974" x2="46" y2="974" stroke="#2ec4b6" stroke-width="3"/><text x="51" y="978" fill="#cfe0ee" font-size="12.5">街道</text>
+<line x1="131" y1="974" x2="153" y2="974" stroke="#ef476f" stroke-width="3"/><text x="158" y="978" fill="#cfe0ee" font-size="12.5">系譜</text>
+<line x1="238" y1="974" x2="260" y2="974" stroke="#118ab2" stroke-width="3"/><text x="265" y="978" fill="#cfe0ee" font-size="12.5">水系</text>
+<line x1="345" y1="974" x2="367" y2="974" stroke="#8338ec" stroke-width="3"/><text x="372" y="978" fill="#cfe0ee" font-size="12.5">主題</text>
+<line x1="452" y1="974" x2="474" y2="974" stroke="#5b6b7f" stroke-width="3"/><text x="479" y="978" fill="#cfe0ee" font-size="12.5">地理近接</text>
+<circle cx="1050" cy="974" r="6" fill="#e8833a"/><text x="1061" y="978" fill="#cfe0ee" font-size="12.5">和歌山</text>
+<circle cx="1116" cy="974" r="6" fill="#7fb069"/><text x="1127" y="978" fill="#cfe0ee" font-size="12.5">奈良</text>
+<circle cx="1182" cy="974" r="6" fill="#4d96ff"/><text x="1193" y="978" fill="#cfe0ee" font-size="12.5">大阪</text>
+<circle cx="1248" cy="974" r="6" fill="#9b5de5"/><text x="1259" y="978" fill="#cfe0ee" font-size="12.5">徳島</text>
+<circle cx="1314" cy="974" r="6" fill="#f15bb5"/><text x="1325" y="978" fill="#cfe0ee" font-size="12.5">三重</text>
+</svg>

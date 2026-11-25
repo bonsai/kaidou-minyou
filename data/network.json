@@ -1,0 +1,1015 @@
+{
+ "nodes": [
+  {
+   "id": "mie-iseondo",
+   "song": "伊勢音頭",
+   "place": "古市・川崎",
+   "muni": "伊勢市",
+   "pref": "三重",
+   "lat": 34.487,
+   "lng": 136.709,
+   "cat": "民謡",
+   "kaidou": "参宮街道（東海道〜伊勢）",
+   "degree": 2
+  },
+  {
+   "id": "mie-okibiki",
+   "song": "お木曳木遣",
+   "place": "中島町・古市",
+   "muni": "伊勢市",
+   "pref": "三重",
+   "lat": 34.49,
+   "lng": 136.715,
+   "cat": "神事歌",
+   "kaidou": "参宮街道（東海道〜伊勢）",
+   "degree": 5
+  },
+  {
+   "id": "mie-okage",
+   "song": "お蔭踊り",
+   "place": "宇治・おはらい町",
+   "muni": "伊勢市",
+   "pref": "三重",
+   "lat": 34.455,
+   "lng": 136.728,
+   "cat": "盆踊り",
+   "kaidou": "参宮街道（東海道〜伊勢）",
+   "degree": 3
+  },
+  {
+   "id": "mie-owase",
+   "song": "尾鷲節",
+   "place": "尾鷲市街",
+   "muni": "尾鷲市",
+   "pref": "三重",
+   "lat": 34.07,
+   "lng": 136.191,
+   "cat": "民謡",
+   "kaidou": "熊野古道・伊勢路と志摩",
+   "degree": 3
+  },
+  {
+   "id": "mie-kuwana",
+   "song": "桑名の殿様",
+   "place": "桑名宿",
+   "muni": "桑名市",
+   "pref": "三重",
+   "lat": 35.062,
+   "lng": 136.684,
+   "cat": "民謡",
+   "kaidou": "参宮街道（東海道〜伊勢）",
+   "degree": 2
+  },
+  {
+   "id": "mie-kanko",
+   "song": "かんこ踊り（羯鼓踊）",
+   "place": "池山（野登寺）",
+   "muni": "亀山市",
+   "pref": "三重",
+   "lat": 34.88,
+   "lng": 136.4,
+   "cat": "祭り・芸能",
+   "kaidou": "参宮街道（東海道〜伊勢）",
+   "degree": 3
+  },
+  {
+   "id": "mie-anori",
+   "song": "安乗の人形芝居",
+   "place": "安乗",
+   "muni": "志摩市",
+   "pref": "三重",
+   "lat": 34.357,
+   "lng": 136.905,
+   "cat": "芝居・芸能",
+   "kaidou": "熊野古道・伊勢路と志摩",
+   "degree": 1
+  },
+  {
+   "id": "nara-otaue",
+   "song": "御田植歌",
+   "place": "春日大社",
+   "muni": "奈良市",
+   "pref": "奈良",
+   "lat": 34.6813,
+   "lng": 135.8485,
+   "cat": "神事歌",
+   "kaidou": "奈良街道（上街道）",
+   "degree": 5
+  },
+  {
+   "id": "nara-asafu",
+   "song": "麻布晒し唄",
+   "place": "柳生",
+   "muni": "奈良市柳生町",
+   "pref": "奈良",
+   "lat": 34.7319,
+   "lng": 135.9028,
+   "cat": "労働歌",
+   "kaidou": "柳生街道",
+   "degree": 2
+  },
+  {
+   "id": "nara-okage",
+   "song": "お蔭踊",
+   "place": "柳生",
+   "muni": "奈良市柳生町",
+   "pref": "奈良",
+   "lat": 34.7319,
+   "lng": 135.9028,
+   "cat": "踊り",
+   "kaidou": "柳生街道",
+   "degree": 3
+  },
+  {
+   "id": "nara-miwa-somen",
+   "song": "三輪素麺掛け唄",
+   "place": "三輪",
+   "muni": "桜井市",
+   "pref": "奈良",
+   "lat": 34.5258,
+   "lng": 135.848,
+   "cat": "労働歌",
+   "kaidou": "山の辺の道",
+   "degree": 0
+  },
+  {
+   "id": "nara-kingyo",
+   "song": "金魚音頭",
+   "place": "大和郡山",
+   "muni": "大和郡山市",
+   "pref": "奈良",
+   "lat": 34.6451,
+   "lng": 135.7667,
+   "cat": "盆踊り",
+   "kaidou": "郡山城下",
+   "degree": 1
+  },
+  {
+   "id": "nara-yoshino-kobiki",
+   "song": "吉野木挽唄",
+   "place": "吉野",
+   "muni": "吉野郡吉野町",
+   "pref": "奈良",
+   "lat": 34.4221,
+   "lng": 135.9374,
+   "cat": "労働歌",
+   "kaidou": "吉野路",
+   "degree": 2
+  },
+  {
+   "id": "nara-yoshino-ikada",
+   "song": "吉野筏流し歌",
+   "place": "吉野川",
+   "muni": "吉野郡吉野町",
+   "pref": "奈良",
+   "lat": 34.4221,
+   "lng": 135.9374,
+   "cat": "労働歌",
+   "kaidou": "吉野路",
+   "degree": 4
+  },
+  {
+   "id": "nara-chabatake",
+   "song": "茶摘み唄",
+   "place": "大和高原（都祁）",
+   "muni": "奈良市都祁",
+   "pref": "奈良",
+   "lat": 34.6056,
+   "lng": 135.9547,
+   "cat": "労働歌",
+   "kaidou": "伊勢街道",
+   "degree": 1
+  },
+  {
+   "id": "osaka-kawachi",
+   "song": "河内音頭",
+   "place": "常光寺",
+   "muni": "八尾市",
+   "pref": "大阪",
+   "lat": 34.617,
+   "lng": 135.6,
+   "cat": "盆踊り",
+   "kaidou": "河内の音頭系譜",
+   "degree": 2
+  },
+  {
+   "id": "osaka-katano",
+   "song": "交野節",
+   "place": "交野市星田・私市",
+   "muni": "交野市",
+   "pref": "大阪",
+   "lat": 34.788,
+   "lng": 135.676,
+   "cat": "盆踊り",
+   "kaidou": "京街道・淀川",
+   "degree": 3
+  },
+  {
+   "id": "osaka-sumiyoshi",
+   "song": "住吉踊り",
+   "place": "住吉大社",
+   "muni": "大阪市住吉区",
+   "pref": "大阪",
+   "lat": 34.612,
+   "lng": 135.493,
+   "cat": "祭り・芸能",
+   "kaidou": "紀州街道・泉州",
+   "degree": 4
+  },
+  {
+   "id": "osaka-horie",
+   "song": "大阪盆踊歌（堀江盆踊唄）",
+   "place": "堀江",
+   "muni": "大阪市西区",
+   "pref": "大阪",
+   "lat": 34.672,
+   "lng": 135.487,
+   "cat": "盆踊り",
+   "kaidou": "京街道・淀川",
+   "degree": 2
+  },
+  {
+   "id": "osaka-sanjikkoku",
+   "song": "淀川三十石船唄",
+   "place": "枚方・淀川",
+   "muni": "枚方市",
+   "pref": "大阪",
+   "lat": 34.815,
+   "lng": 135.651,
+   "cat": "舟歌",
+   "kaidou": "京街道・淀川",
+   "degree": 3
+  },
+  {
+   "id": "osaka-danjiri",
+   "song": "地車囃子（だんじり囃子）",
+   "place": "岸和田城下",
+   "muni": "岸和田市",
+   "pref": "大阪",
+   "lat": 34.46,
+   "lng": 135.371,
+   "cat": "祭り",
+   "kaidou": "紀州街道・泉州",
+   "degree": 2
+  },
+  {
+   "id": "osaka-senbon",
+   "song": "千本搗餅搗唄",
+   "place": "水間寺",
+   "muni": "貝塚市",
+   "pref": "大阪",
+   "lat": 34.405,
+   "lng": 135.385,
+   "cat": "労働歌",
+   "kaidou": "紀州街道・泉州",
+   "degree": 1
+  },
+  {
+   "id": "tokushima-awaodori",
+   "song": "阿波踊り（よしこの節）",
+   "place": "徳島市中心部",
+   "muni": "徳島市",
+   "pref": "徳島",
+   "lat": 34.07,
+   "lng": 134.555,
+   "cat": "盆踊り・祭り",
+   "kaidou": "阿波の玄関口・吉野川下流",
+   "degree": 4
+  },
+  {
+   "id": "tokushima-sekizoro",
+   "song": "せきぞろ（節季候）",
+   "place": "徳島市",
+   "muni": "徳島市",
+   "pref": "徳島",
+   "lat": 34.066,
+   "lng": 134.56,
+   "cat": "民謡",
+   "kaidou": "阿波の玄関口・吉野川下流",
+   "degree": 2
+  },
+  {
+   "id": "tokushima-mugiuchi",
+   "song": "徳島麦打唄",
+   "place": "吉野川流域",
+   "muni": "吉野川市",
+   "pref": "徳島",
+   "lat": 34.066,
+   "lng": 134.358,
+   "cat": "労働歌",
+   "kaidou": "阿波の玄関口・吉野川下流",
+   "degree": 4
+  },
+  {
+   "id": "tokushima-iya-konahiki",
+   "song": "祖谷の粉ひき唄",
+   "place": "祖谷渓",
+   "muni": "三好市",
+   "pref": "徳島",
+   "lat": 33.935,
+   "lng": 133.835,
+   "cat": "労働歌",
+   "kaidou": "祖谷路",
+   "degree": 2
+  },
+  {
+   "id": "tokushima-iya-jinku",
+   "song": "祖谷甚句",
+   "place": "祖谷渓",
+   "muni": "三好市",
+   "pref": "徳島",
+   "lat": 33.94,
+   "lng": 133.84,
+   "cat": "民謡",
+   "kaidou": "祖谷路",
+   "degree": 1
+  },
+  {
+   "id": "tokushima-naruto-tairyo",
+   "song": "鳴門大漁節",
+   "place": "鳴門の海",
+   "muni": "鳴門市",
+   "pref": "徳島",
+   "lat": 34.173,
+   "lng": 134.609,
+   "cat": "民謡",
+   "kaidou": "阿波の玄関口・吉野川下流",
+   "degree": 3
+  },
+  {
+   "id": "tokushima-naruto-umago",
+   "song": "鳴門馬子唄ばやし",
+   "place": "鳴門市",
+   "muni": "鳴門市",
+   "pref": "徳島",
+   "lat": 34.168,
+   "lng": 134.615,
+   "cat": "民謡",
+   "kaidou": "阿波の玄関口・吉野川下流",
+   "degree": 2
+  },
+  {
+   "id": "wakayama-kushimoto",
+   "song": "串本節",
+   "place": "串本町",
+   "muni": "東牟婁郡串本町",
+   "pref": "和歌山",
+   "lat": 33.4858,
+   "lng": 135.7869,
+   "cat": "民謡",
+   "kaidou": "熊野古道",
+   "degree": 2
+  },
+  {
+   "id": "wakayama-katsuura",
+   "song": "勝浦節",
+   "place": "那智勝浦町",
+   "muni": "東牟婁郡那智勝浦町",
+   "pref": "和歌山",
+   "lat": 33.6259,
+   "lng": 135.9411,
+   "cat": "民謡",
+   "kaidou": "熊野古道",
+   "degree": 3
+  },
+  {
+   "id": "wakayama-mikan",
+   "song": "みかん摘み唄",
+   "place": "有田",
+   "muni": "有田市",
+   "pref": "和歌山",
+   "lat": 34.0831,
+   "lng": 135.1276,
+   "cat": "労働歌",
+   "kaidou": "紀伊路",
+   "degree": 2
+  },
+  {
+   "id": "wakayama-nachi-dengaku",
+   "song": "那智の田楽",
+   "place": "熊野那智大社",
+   "muni": "東牟婁郡那智勝浦町",
+   "pref": "和歌山",
+   "lat": 33.6259,
+   "lng": 135.9411,
+   "cat": "祭り・芸能",
+   "kaidou": "熊野古道",
+   "degree": 3
+  },
+  {
+   "id": "wakayama-kouchi",
+   "song": "河内祭の御舟行事",
+   "place": "古座川",
+   "muni": "東牟婁郡古座川町",
+   "pref": "和歌山",
+   "lat": 33.5317,
+   "lng": 135.8146,
+   "cat": "祭り",
+   "kaidou": "熊野古道",
+   "degree": 3
+  },
+  {
+   "id": "wakayama-okubo-jitsuki",
+   "song": "大窪の地搗唄",
+   "place": "下津町大窪",
+   "muni": "海南市下津町大窪",
+   "pref": "和歌山",
+   "lat": 34.13,
+   "lng": 135.17,
+   "cat": "民謡",
+   "kaidou": "紀伊路",
+   "degree": 1
+  },
+  {
+   "id": "wakayama-kumanogawa-ikada",
+   "song": "熊野川筏節",
+   "place": "熊野川町",
+   "muni": "新宮市熊野川町",
+   "pref": "和歌山",
+   "lat": 33.83,
+   "lng": 135.97,
+   "cat": "民謡",
+   "kaidou": "熊野古道",
+   "degree": 4
+  }
+ ],
+ "edges": [
+  {
+   "a": "mie-iseondo",
+   "b": "mie-okibiki",
+   "types": [
+    "地理近接",
+    "系譜",
+    "街道"
+   ],
+   "basis": [
+    "1km",
+    "参宮街道（東海道〜伊勢）",
+    "お木曳木遣が伊勢音頭の源流"
+   ],
+   "cross": false
+  },
+  {
+   "a": "mie-iseondo",
+   "b": "mie-okage",
+   "types": [
+    "地理近接",
+    "街道"
+   ],
+   "basis": [
+    "4km",
+    "参宮街道（東海道〜伊勢）"
+   ],
+   "cross": false
+  },
+  {
+   "a": "mie-okage",
+   "b": "mie-okibiki",
+   "types": [
+    "地理近接"
+   ],
+   "basis": [
+    "4km"
+   ],
+   "cross": false
+  },
+  {
+   "a": "nara-asafu",
+   "b": "nara-otaue",
+   "types": [
+    "地理近接"
+   ],
+   "basis": [
+    "8km"
+   ],
+   "cross": false
+  },
+  {
+   "a": "nara-okage",
+   "b": "nara-otaue",
+   "types": [
+    "地理近接"
+   ],
+   "basis": [
+    "8km"
+   ],
+   "cross": false
+  },
+  {
+   "a": "nara-kingyo",
+   "b": "nara-otaue",
+   "types": [
+    "地理近接"
+   ],
+   "basis": [
+    "8km"
+   ],
+   "cross": false
+  },
+  {
+   "a": "nara-asafu",
+   "b": "nara-okage",
+   "types": [
+    "地理近接",
+    "街道"
+   ],
+   "basis": [
+    "0km",
+    "柳生街道"
+   ],
+   "cross": false
+  },
+  {
+   "a": "nara-yoshino-ikada",
+   "b": "nara-yoshino-kobiki",
+   "types": [
+    "地理近接",
+    "街道"
+   ],
+   "basis": [
+    "0km",
+    "吉野路"
+   ],
+   "cross": false
+  },
+  {
+   "a": "osaka-kawachi",
+   "b": "osaka-sumiyoshi",
+   "types": [
+    "地理近接"
+   ],
+   "basis": [
+    "10km"
+   ],
+   "cross": false
+  },
+  {
+   "a": "osaka-katano",
+   "b": "osaka-sanjikkoku",
+   "types": [
+    "地理近接",
+    "街道"
+   ],
+   "basis": [
+    "4km",
+    "京街道・淀川"
+   ],
+   "cross": false
+  },
+  {
+   "a": "osaka-horie",
+   "b": "osaka-sumiyoshi",
+   "types": [
+    "地理近接"
+   ],
+   "basis": [
+    "7km"
+   ],
+   "cross": false
+  },
+  {
+   "a": "osaka-danjiri",
+   "b": "osaka-senbon",
+   "types": [
+    "地理近接",
+    "街道"
+   ],
+   "basis": [
+    "6km",
+    "紀州街道・泉州"
+   ],
+   "cross": false
+  },
+  {
+   "a": "tokushima-awaodori",
+   "b": "tokushima-sekizoro",
+   "types": [
+    "地理近接"
+   ],
+   "basis": [
+    "1km"
+   ],
+   "cross": false
+  },
+  {
+   "a": "tokushima-iya-jinku",
+   "b": "tokushima-iya-konahiki",
+   "types": [
+    "地理近接",
+    "街道"
+   ],
+   "basis": [
+    "1km",
+    "祖谷路"
+   ],
+   "cross": false
+  },
+  {
+   "a": "tokushima-naruto-tairyo",
+   "b": "tokushima-naruto-umago",
+   "types": [
+    "地理近接",
+    "街道"
+   ],
+   "basis": [
+    "1km",
+    "阿波の玄関口・吉野川下流"
+   ],
+   "cross": false
+  },
+  {
+   "a": "wakayama-kouchi",
+   "b": "wakayama-kushimoto",
+   "types": [
+    "地理近接",
+    "街道"
+   ],
+   "basis": [
+    "6km",
+    "熊野古道"
+   ],
+   "cross": false
+  },
+  {
+   "a": "wakayama-katsuura",
+   "b": "wakayama-nachi-dengaku",
+   "types": [
+    "地理近接",
+    "街道"
+   ],
+   "basis": [
+    "0km",
+    "熊野古道"
+   ],
+   "cross": false
+  },
+  {
+   "a": "wakayama-mikan",
+   "b": "wakayama-okubo-jitsuki",
+   "types": [
+    "地理近接",
+    "街道"
+   ],
+   "basis": [
+    "7km",
+    "紀伊路"
+   ],
+   "cross": false
+  },
+  {
+   "a": "mie-kanko",
+   "b": "mie-kuwana",
+   "types": [
+    "街道"
+   ],
+   "basis": [
+    "参宮街道（東海道〜伊勢）"
+   ],
+   "cross": false
+  },
+  {
+   "a": "mie-kanko",
+   "b": "mie-okibiki",
+   "types": [
+    "街道"
+   ],
+   "basis": [
+    "参宮街道（東海道〜伊勢）"
+   ],
+   "cross": false
+  },
+  {
+   "a": "mie-anori",
+   "b": "mie-owase",
+   "types": [
+    "街道"
+   ],
+   "basis": [
+    "熊野古道・伊勢路と志摩"
+   ],
+   "cross": false
+  },
+  {
+   "a": "osaka-horie",
+   "b": "osaka-katano",
+   "types": [
+    "街道"
+   ],
+   "basis": [
+    "京街道・淀川"
+   ],
+   "cross": false
+  },
+  {
+   "a": "osaka-danjiri",
+   "b": "osaka-sumiyoshi",
+   "types": [
+    "街道"
+   ],
+   "basis": [
+    "紀州街道・泉州"
+   ],
+   "cross": false
+  },
+  {
+   "a": "tokushima-awaodori",
+   "b": "tokushima-naruto-umago",
+   "types": [
+    "街道"
+   ],
+   "basis": [
+    "阿波の玄関口・吉野川下流"
+   ],
+   "cross": false
+  },
+  {
+   "a": "tokushima-awaodori",
+   "b": "tokushima-mugiuchi",
+   "types": [
+    "街道"
+   ],
+   "basis": [
+    "阿波の玄関口・吉野川下流"
+   ],
+   "cross": false
+  },
+  {
+   "a": "tokushima-mugiuchi",
+   "b": "tokushima-sekizoro",
+   "types": [
+    "街道"
+   ],
+   "basis": [
+    "阿波の玄関口・吉野川下流"
+   ],
+   "cross": false
+  },
+  {
+   "a": "wakayama-katsuura",
+   "b": "wakayama-kumanogawa-ikada",
+   "types": [
+    "街道"
+   ],
+   "basis": [
+    "熊野古道"
+   ],
+   "cross": false
+  },
+  {
+   "a": "wakayama-kouchi",
+   "b": "wakayama-nachi-dengaku",
+   "types": [
+    "街道"
+   ],
+   "basis": [
+    "熊野古道"
+   ],
+   "cross": false
+  },
+  {
+   "a": "mie-owase",
+   "b": "wakayama-kumanogawa-ikada",
+   "types": [
+    "街道"
+   ],
+   "basis": [
+    "熊野古道（県境接続）"
+   ],
+   "cross": true
+  },
+  {
+   "a": "mie-owase",
+   "b": "wakayama-katsuura",
+   "types": [
+    "街道"
+   ],
+   "basis": [
+    "熊野古道・伊勢路"
+   ],
+   "cross": true
+  },
+  {
+   "a": "mie-kanko",
+   "b": "nara-chabatake",
+   "types": [
+    "街道"
+   ],
+   "basis": [
+    "伊勢街道〜参宮街道"
+   ],
+   "cross": true
+  },
+  {
+   "a": "osaka-katano",
+   "b": "osaka-kawachi",
+   "types": [
+    "系譜"
+   ],
+   "basis": [
+    "交野節は河内音頭の元節"
+   ],
+   "cross": false
+  },
+  {
+   "a": "mie-kuwana",
+   "b": "mie-okibiki",
+   "types": [
+    "系譜"
+   ],
+   "basis": [
+    "松前木遣に由来を共有"
+   ],
+   "cross": false
+  },
+  {
+   "a": "mie-okage",
+   "b": "nara-okage",
+   "types": [
+    "系譜"
+   ],
+   "basis": [
+    "お蔭参りの流行踊りが沿道に拡散"
+   ],
+   "cross": true
+  },
+  {
+   "a": "nara-yoshino-ikada",
+   "b": "tokushima-mugiuchi",
+   "types": [
+    "水系"
+   ],
+   "basis": [
+    "吉野川（上流・奈良→下流・徳島）"
+   ],
+   "cross": true
+  },
+  {
+   "a": "nara-yoshino-ikada",
+   "b": "tokushima-awaodori",
+   "types": [
+    "水系"
+   ],
+   "basis": [
+    "吉野川下流の文化圏"
+   ],
+   "cross": true
+  },
+  {
+   "a": "wakayama-kouchi",
+   "b": "wakayama-kumanogawa-ikada",
+   "types": [
+    "水系"
+   ],
+   "basis": [
+    "熊野川・古座川水系"
+   ],
+   "cross": false
+  },
+  {
+   "a": "tokushima-iya-konahiki",
+   "b": "tokushima-mugiuchi",
+   "types": [
+    "水系"
+   ],
+   "basis": [
+    "祖谷川は吉野川の支流"
+   ],
+   "cross": false
+  },
+  {
+   "a": "nara-yoshino-ikada",
+   "b": "wakayama-kumanogawa-ikada",
+   "types": [
+    "主題"
+   ],
+   "basis": [
+    "筏流し（紀伊半島の林業圏）"
+   ],
+   "cross": true
+  },
+  {
+   "a": "mie-okibiki",
+   "b": "nara-yoshino-kobiki",
+   "types": [
+    "主題"
+   ],
+   "basis": [
+    "木を扱う労働歌"
+   ],
+   "cross": true
+  },
+  {
+   "a": "osaka-sanjikkoku",
+   "b": "tokushima-naruto-tairyo",
+   "types": [
+    "主題"
+   ],
+   "basis": [
+    "船と海の歌"
+   ],
+   "cross": true
+  },
+  {
+   "a": "osaka-sanjikkoku",
+   "b": "wakayama-mikan",
+   "types": [
+    "主題"
+   ],
+   "basis": [
+    "船（みかん船／三十石船）"
+   ],
+   "cross": true
+  },
+  {
+   "a": "tokushima-naruto-tairyo",
+   "b": "wakayama-kushimoto",
+   "types": [
+    "主題"
+   ],
+   "basis": [
+    "港と漁の歌"
+   ],
+   "cross": true
+  },
+  {
+   "a": "nara-otaue",
+   "b": "osaka-sumiyoshi",
+   "types": [
+    "主題"
+   ],
+   "basis": [
+    "御田植の神事"
+   ],
+   "cross": true
+  },
+  {
+   "a": "nara-otaue",
+   "b": "wakayama-nachi-dengaku",
+   "types": [
+    "主題"
+   ],
+   "basis": [
+    "田楽・田植の神事芸能"
+   ],
+   "cross": true
+  }
+ ],
+ "stats": {
+  "n_nodes": 36,
+  "n_edges": 45,
+  "cross_pref_edges": 13,
+  "type_count": {
+   "地理近接": 18,
+   "系譜": 4,
+   "街道": 24,
+   "水系": 4,
+   "主題": 7
+  },
+  "components": [
+   35,
+   1
+  ],
+  "hubs": [
+   [
+    "お木曳木遣",
+    "三重",
+    5
+   ],
+   [
+    "御田植歌",
+    "奈良",
+    5
+   ],
+   [
+    "吉野筏流し歌",
+    "奈良",
+    4
+   ],
+   [
+    "住吉踊り",
+    "大阪",
+    4
+   ],
+   [
+    "阿波踊り（よしこの節）",
+    "徳島",
+    4
+   ],
+   [
+    "徳島麦打唄",
+    "徳島",
+    4
+   ],
+   [
+    "熊野川筏節",
+    "和歌山",
+    4
+   ],
+   [
+    "お蔭踊り",
+    "三重",
+    3
+   ]
+  ]
+ }
+}

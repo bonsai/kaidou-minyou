@@ -70,7 +70,13 @@
 
 <div id="status">位置情報を待っています…</div>
 <div id="nearest"></div>
-<div id="simBar"><button class="sub" id="simBtn">テスト：最寄りスポットに仮想移動</button></div>
+<div id="simBar"><button class="sub" id="simBtn">テスト：最寄りスポットに仮想移動</button>
+<button class="sub" id="dbgBtn">デバッグモード</button></div>
+<div id="dbgPanel" style="display:none; margin-top:8px; font-family:sans-serif; font-size:13px;">
+  移動速度：<select id="dbgSpeed"><option value="1">徒歩 ×1（4km/h）</option><option value="10">×10（40km/h）</option><option value="60" selected>×60（240km/h）</option><option value="300">×300（1200km/h）</option></select>
+  <button class="sub" id="walkBtn">最寄りへ歩く</button>
+  <div style="opacity:.7; margin-top:4px;">デバッグ中は仮想位置で移動します（チート可・テスト専用）</div>
+</div>
 
 <div id="card">
   <h2 id="cardSong"></h2>
@@ -218,6 +224,26 @@ async function startGeo(){
     document.getElementById("status").textContent = "この端末では位置情報が使えません";
   }
 }
+let walkTimer = null;
+document.getElementById("dbgBtn").addEventListener("click", ()=>{
+  const p = document.getElementById("dbgPanel");
+  p.style.display = p.style.display === "none" ? "block" : "none";
+});
+document.getElementById("walkBtn").addEventListener("click", (e)=>{
+  if(walkTimer){ clearInterval(walkTimer); walkTimer = null; e.target.textContent = "最寄りへ歩く"; return; }
+  if(!myPos){ alert("先に位置情報が来るのを待ってください"); return; }
+  e.target.textContent = "止まる";
+  walkTimer = setInterval(()=>{
+    let best = null;
+    for(const s of SPOTS){ const d = haversineKm(myPos.lat, myPos.lng, s.lat, s.lng); if(!best || d < best.d) best = {s, d}; }
+    if(!best || best.d < 0.05){ clearInterval(walkTimer); walkTimer = null; document.getElementById("walkBtn").textContent = "最寄りへ歩く"; return; }
+    const mult = parseFloat(document.getElementById("dbgSpeed").value);
+    const stepKm = (4 * mult) * (0.5 / 3600); // 0.5秒ごとの移動量
+    const frac = Math.min(1, stepKm / best.d);
+    myPos = { lat: myPos.lat + (best.s.lat - myPos.lat) * frac, lng: myPos.lng + (best.s.lng - myPos.lng) * frac };
+    render();
+  }, 500);
+});
 renderMedals();
 startGeo();
 </script>

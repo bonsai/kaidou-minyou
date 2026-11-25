@@ -1,5 +1,5 @@
 # 民謡レーダー UI設計（言葉のみ）
-# 対応するUX: docs/ux.yaml / 企画: docs/CONCEPT.md
+# 対応するUX: spec/ux.yaml / 企画: doc/CONCEPT.md
 # 原則: 画面はレーダーが主役。UIは歩行の邪魔をしない
 
 meta:

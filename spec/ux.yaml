@@ -1,5 +1,5 @@
 # 民謡レーダー UX設計（言葉のみ）
-# 正本の考え方: docs/CONCEPT.md / データ: data/*.json
+# 正本の考え方: doc/CONCEPT.md / データ: data/*.json
 # 原則: 地図のリストは見せない。音声が主、画面はレーダーだけ。
 
 meta:

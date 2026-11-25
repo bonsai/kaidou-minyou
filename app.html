@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>民謡レーダー</title>
+<style>
+  :root{ color-scheme: dark; }
+  *{ box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  body{ margin:0; background:radial-gradient(circle at 50% 42%, #0d2136 0%, #050b14 70%); color:#e8e0c8; font-family:"Hiragino Mincho ProN","Yu Mincho",serif; min-height:100vh; display:flex; flex-direction:column; align-items:center; }
+  header{ padding:14px 0 2px; text-align:center; }
+  header .pref{ font-size:13px; letter-spacing:.35em; opacity:.75; }
+  header h1{ font-size:19px; margin:2px 0 0; letter-spacing:.2em; font-weight:600; }
+  #radarWrap{ position:relative; width:min(88vw,420px); aspect-ratio:1; margin-top:8px; }
+  svg{ width:100%; height:100%; display:block; }
+  .ring{ fill:none; stroke:#2e5d50; stroke-width:1; opacity:.7; }
+  .ringLabel{ fill:#7fae9d; font-size:10px; font-family:sans-serif; }
+  #sweep{ transform-origin:200px 200px; animation:spin 8s linear infinite; }
+  body.inrange #sweep{ animation-duration:1.2s; }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+  .dot{ fill:#ffb85c; }
+  .dot.got{ fill:#4fae9d; }
+  .dotLabel{ fill:#ffcf90; font-size:12px; font-family:sans-serif; }
+  body.inrange #radarWrap{ animation:pulse .5s ease-in-out infinite alternate; }
+  @keyframes pulse{ from{ filter:brightness(1);} to{ filter:brightness(1.5);} }
+  #status{ margin-top:10px; font-size:14px; min-height:1.5em; text-align:center; opacity:.9; padding:0 16px; }
+  #nearest{ font-family:sans-serif; font-size:13px; opacity:.75; min-height:1.4em; }
+  #card{ display:none; margin:14px 16px 0; max-width:420px; background:rgba(20,36,30,.85); border:1px solid #c9a227; border-radius:12px; padding:16px 18px; }
+  #card h2{ margin:0 0 2px; font-size:19px; }
+  #card .place{ font-size:13px; opacity:.8; margin-bottom:8px; }
+  #card p{ font-size:14px; line-height:1.7; margin:6px 0; }
+  #card .theme{ font-size:13px; color:#ffcf90; }
+  button{ font-family:sans-serif; background:#c9a227; color:#141c14; border:none; border-radius:999px; padding:11px 22px; font-size:15px; font-weight:700; margin-top:10px; }
+  button.sub{ background:transparent; color:#e8e0c8; border:1px solid #557; font-weight:400; font-size:13px; padding:8px 16px; }
+  #collection{ margin:18px 16px 30px; max-width:420px; width:calc(100% - 32px); }
+  #collection h3{ font-size:14px; letter-spacing:.2em; opacity:.85; }
+  .medals{ display:flex; flex-wrap:wrap; gap:8px; }
+  .medal{ width:52px; height:52px; border-radius:50%; border:2px solid #c9a227; display:flex; align-items:center; justify-content:center; font-size:10px; text-align:center; padding:4px; background:radial-gradient(circle at 35% 30%, #ffe9a8, #b8860b); color:#241a00; font-family:sans-serif; }
+  .medal.empty{ background:transparent; border:1px dashed #445; color:#667; }
+  #badgeLine{ margin-top:10px; font-size:14px; color:#ffcf90; min-height:1.4em; }
+  #simBar{ margin:6px 0 0; }
+</style>
+</head>
+<body>
+<header>
+  <div class="pref" id="prefName">和歌山県</div>
+  <h1>民謡レーダー</h1>
+</header>
+
+<div id="radarWrap">
+  <svg viewBox="0 0 400 400" id="radar">
+    <circle class="ring" cx="200" cy="200" r="190"/>
+    <circle class="ring" cx="200" cy="200" r="142"/>
+    <circle class="ring" cx="200" cy="200" r="95"/>
+    <circle class="ring" cx="200" cy="200" r="47"/>
+    <text class="ringLabel" x="206" y="66">6里 24km</text>
+    <text class="ringLabel" x="206" y="113">4里 16km</text>
+    <text class="ringLabel" x="206" y="161">2里 8km</text>
+    <text class="ringLabel" x="206" y="18">8里 32km</text>
+    <line x1="200" y1="10" x2="200" y2="390" stroke="#2e5d50" opacity=".4"/>
+    <line x1="10" y1="200" x2="390" y2="200" stroke="#2e5d50" opacity=".4"/>
+    <g id="sweep">
+      <path d="M200 200 L200 10 A190 190 0 0 1 295 35 Z" fill="rgba(110,231,183,.18)"/>
+      <line x1="200" y1="200" x2="200" y2="10" stroke="#6ee7b7" stroke-width="2"/>
+    </g>
+    <g id="dots"></g>
+    <circle cx="200" cy="200" r="5" fill="#e8e0c8"/>
+  </svg>
+</div>
+
+<div id="status">位置情報を待っています…</div>
+<div id="nearest"></div>
+<div id="simBar"><button class="sub" id="simBtn">テスト：最寄りスポットに仮想移動</button>
+<button class="sub" id="dbgBtn">デバッグモード</button></div>
+<div id="dbgPanel" style="display:none; margin-top:8px; font-family:sans-serif; font-size:13px;">
+  移動速度：<select id="dbgSpeed"><option value="1">徒歩 ×1（4km/h）</option><option value="10">×10（40km/h）</option><option value="60" selected>×60（240km/h）</option><option value="300">×300（1200km/h）</option></select>
+  <button class="sub" id="walkBtn">最寄りへ歩く</button>
+  <div style="opacity:.7; margin-top:4px;">デバッグ中は仮想位置で移動します（チート可・テスト専用）</div>
+</div>
+
+<div id="card">
+  <h2 id="cardSong"></h2>
+  <div class="place" id="cardPlace"></div>
+  <div class="theme" id="cardTheme"></div>
+  <p id="cardMemory"></p>
+  <button id="medalBtn">メダルを手に入れる</button>
+</div>
+
+<div id="collection">
+  <h3>コレクション ― 和歌山のメダル</h3>
+  <div class="medals" id="medals"></div>
+  <div id="badgeLine"></div>
+</div>
+
+<script>
+const SPOTS = [
+ {id:"wakayama-kushimoto",song:"串本節",place:"串本町",lat:33.4858,lng:135.7869,radius_m:500,theme:"漁船と港",memory:"本州最南端の港町・串本。漁と行き交う人の唄。",hint:"海のほうから、賑やかな唄が聞こえる"},
+ {id:"wakayama-katsuura",song:"勝浦節",place:"那智勝浦町",lat:33.6259,lng:135.9411,radius_m:500,theme:"港と鮪",memory:"勝浦の港の唄。遠くトロントの民謡ユニットの動画で再発見された。",hint:"港のほうに、唄の気配"},
+ {id:"wakayama-mikan",song:"みかん摘み唄",place:"有田市",lat:34.0831,lng:135.1276,radius_m:500,theme:"みかん籠",memory:"有田みかんの摘み唄。県のアーカイブに歌詞が残る。",hint:"畑のほうから、手仕事の唄"},
+ {id:"wakayama-nachi-dengaku",song:"那智の田楽",place:"那智勝浦町",lat:33.6259,lng:135.9411,radius_m:500,theme:"扇と田楽",memory:"那智の田楽。扇祭りで知られる那智大社の芸能。",hint:"祭りの音が近づいてくる"},
+ {id:"wakayama-kouchi",song:"河内祭の御舟行事",place:"古座川町・串本方面",lat:33.5317,lng:135.8146,radius_m:500,theme:"御舟",memory:"河内祭の御舟行事。熊野の海の祭り。",hint:"海の祭りの気配"},
+ {id:"wakayama-okubo-jitsuki",song:"大窪の地搗唄",place:"海南市下津町大窪",lat:34.13,lng:135.17,radius_m:500,theme:"地搗き",memory:"地搗き（地固め）の労働の唄。和歌山県文化情報アーカイブに音源と歌詞全文。地搗きはイベントで実演もされる。",hint:"足元から、土を搗く音のリズム"},
+ {id:"wakayama-kumanogawa-ikada",song:"熊野川筏節",place:"新宮市熊野川町",lat:33.83,lng:135.97,radius_m:500,theme:"筏流し",memory:"熊野川の筏流しの唄。山の木を川で運んだ労働の記録。",hint:"川のほうから、木の流れる気配"}
+];
+const LANDMARKS = [
+ {type:"山", name:"龍門山", lat:34.257, lng:135.385, note:"座標は概略・要検証"}
+];
+const RANGE_KM = 32, CX = 200, CY = 200, R = 190;
+const got = new Set(JSON.parse(localStorage.getItem("minyo-medals") || "[]"));
+let myPos = null, inRangeSpot = null, simOffset = null;
+
+function haversineKm(a,b,c,d){ const Rk=6371, rad=x=>x*Math.PI/180;
+  const dLat=rad(c-a), dLng=rad(d-b);
+  const h=Math.sin(dLat/2)**2 + Math.cos(rad(a))*Math.cos(rad(c))*Math.sin(dLng/2)**2;
+  return 2*Rk*Math.asin(Math.sqrt(h)); }
+function bearingDeg(a,b,c,d){ const rad=x=>x*Math.PI/180;
+  const y=Math.sin(rad(d-b))*Math.cos(rad(c));
+  const x=Math.cos(rad(a))*Math.sin(rad(c))-Math.sin(rad(a))*Math.cos(rad(c))*Math.cos(rad(d-b));
+  return (Math.atan2(y,x)*180/Math.PI+360)%360; }
+
+function render(){
+  const g = document.getElementById("dots"); g.innerHTML = "";
+  const status = document.getElementById("status"), nearest = document.getElementById("nearest");
+  if(!myPos){ status.textContent = "位置情報を待っています…"; return; }
+  let best = null;
+  for(const s of SPOTS){
+    const dist = haversineKm(myPos.lat, myPos.lng, s.lat, s.lng);
+    s._dist = dist;
+    if(!best || dist < best._dist) best = s;
+    if(dist > RANGE_KM) continue;
+    const brg = bearingDeg(myPos.lat, myPos.lng, s.lat, s.lng) * Math.PI/180;
+    const rr = (dist / RANGE_KM) * R;
+    const x = CX + rr * Math.sin(brg), y = CY - rr * Math.cos(brg);
+    const c = document.createElementNS("http://www.w3.org/2000/svg","circle");
+    c.setAttribute("cx",x); c.setAttribute("cy",y);
+    c.setAttribute("r", Math.max(5, 13 - dist/3));
+    c.setAttribute("class","dot" + (got.has(s.id) ? " got" : ""));
+    g.appendChild(c);
+    const t = document.createElementNS("http://www.w3.org/2000/svg","text");
+    t.setAttribute("x", x+12); t.setAttribute("y", y+4); t.setAttribute("class","dotLabel");
+    t.textContent = dist < 1 ? Math.round(dist*1000) + "m" : dist.toFixed(1) + "km";
+    g.appendChild(t);
+  }
+  for(const lm of LANDMARKS){
+    const d = haversineKm(myPos.lat, myPos.lng, lm.lat, lm.lng);
+    if(d > RANGE_KM) continue;
+    const b = bearingDeg(myPos.lat, myPos.lng, lm.lat, lm.lng) * Math.PI/180;
+    const rr = (d / RANGE_KM) * R;
+    const x = CX + rr * Math.sin(b), y = CY - rr * Math.cos(b);
+    const tri = document.createElementNS("http://www.w3.org/2000/svg","path");
+    tri.setAttribute("d", `M${x} ${y-6} L${x+6} ${y+5} L${x-6} ${y+5} Z`);
+    tri.setAttribute("fill","none"); tri.setAttribute("stroke","#7fae9d"); tri.setAttribute("stroke-width","1.2");
+    g.appendChild(tri);
+    const lt = document.createElementNS("http://www.w3.org/2000/svg","text");
+    lt.setAttribute("x", x+9); lt.setAttribute("y", y+3); lt.setAttribute("class","ringLabel");
+    lt.textContent = lm.name; g.appendChild(lt);
+  }
+  const newIn = best && best._dist * 1000 <= best.radius_m ? best : null;
+  if(newIn && (!inRangeSpot || inRangeSpot.id !== newIn.id)) enterRange(newIn);
+  if(!newIn && inRangeSpot) exitRange();
+  if(best){
+    nearest.textContent = inRangeSpot ? "" : "いちばん近い気配まで " + (best._dist < 1 ? Math.round(best._dist*1000)+"m" : best._dist.toFixed(1)+"km");
+    if(!inRangeSpot) status.textContent = best._dist <= RANGE_KM ? best.hint : "レーダーの輪（8里）の外。もっと近づくと何か出てくる";
+  }
+  renderMedals();
+}
+function beep(){ try{ const ctx = new (window.AudioContext||window.webkitAudioContext)();
+  [0,0.18,0.36].forEach((d,i)=>{ const o=ctx.createOscillator(), gn=ctx.createGain();
+    o.frequency.value = 660 + i*220; o.connect(gn); gn.connect(ctx.destination);
+    gn.gain.setValueAtTime(0.15, ctx.currentTime+d); o.start(ctx.currentTime+d); o.stop(ctx.currentTime+d+0.14); }); }catch(e){} }
+function enterRange(s){
+  inRangeSpot = s; document.body.classList.add("inrange");
+  document.getElementById("status").textContent = "圏内だよ。何かある";
+  if(navigator.vibrate) navigator.vibrate([120,60,120,60,240]);
+  beep();
+  document.getElementById("cardSong").textContent = s.song;
+  document.getElementById("cardPlace").textContent = s.place;
+  document.getElementById("cardTheme").textContent = "メダルのモチーフ：" + s.theme;
+  document.getElementById("cardMemory").textContent = s.memory;
+  document.getElementById("medalBtn").textContent = got.has(s.id) ? "獲得済みのメダル" : "メダルを手に入れる";
+  document.getElementById("card").style.display = "block";
+}
+function exitRange(){ inRangeSpot = null; document.body.classList.remove("inrange"); document.getElementById("card").style.display = "none"; }
+document.getElementById("medalBtn").addEventListener("click", ()=>{
+  if(!inRangeSpot) return;
+  got.add(inRangeSpot.id);
+  localStorage.setItem("minyo-medals", JSON.stringify([...got]));
+  document.getElementById("medalBtn").textContent = "獲得済みのメダル";
+  if(navigator.vibrate) navigator.vibrate(200);
+  render();
+});
+function renderMedals(){
+  const m = document.getElementById("medals"); m.innerHTML = "";
+  for(const s of SPOTS){
+    const d = document.createElement("div");
+    d.className = "medal" + (got.has(s.id) ? "" : " empty");
+    d.textContent = got.has(s.id) ? s.theme : "？";
+    m.appendChild(d);
+  }
+  document.getElementById("badgeLine").textContent =
+    got.size >= 7 ? "和歌山県のバッジ完成！ 県章ゴールドバッジ" : "メダル " + got.size + " / 7 ― そろうと県章ゴールドバッジ";
+}
+document.getElementById("simBtn").addEventListener("click", ()=>{
+  if(!myPos){ alert("先に位置情報が来るのを待ってください"); return; }
+  let best = null;
+  for(const s of SPOTS){ const d = haversineKm(myPos.lat, myPos.lng, s.lat, s.lng); if(!best || d < best.d) best = {s, d}; }
+  if(best){ simOffset = { lat: best.s.lat - myPos.lat, lng: best.s.lng - myPos.lng };
+    myPos = { lat: best.s.lat, lng: best.s.lng }; render();
+    document.getElementById("simBtn").textContent = "テスト中：" + best.s.song + " の圏内（再読込で解除）"; }
+});
+async function startGeo(){
+  const Cap = window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.Geolocation;
+  if(Cap){
+    try{ await Cap.requestPermissions(); }catch(e){}
+    Cap.watchPosition({ enableHighAccuracy:true }, (pos)=>{
+      if(pos){ myPos = { lat: pos.coords.latitude, lng: pos.coords.longitude }; render(); }
+    });
+  } else if(navigator.geolocation){
+    navigator.geolocation.watchPosition(
+      p => { myPos = { lat: p.coords.latitude, lng: p.coords.longitude }; render(); },
+      e => { document.getElementById("status").textContent = "位置情報が取れませんでした（許可を確認してください）"; },
+      { enableHighAccuracy:true, maximumAge:5000 });
+  } else {
+    document.getElementById("status").textContent = "この端末では位置情報が使えません";
+  }
+}
+let walkTimer = null;
+document.getElementById("dbgBtn").addEventListener("click", ()=>{
+  const p = document.getElementById("dbgPanel");
+  p.style.display = p.style.display === "none" ? "block" : "none";
+});
+document.getElementById("walkBtn").addEventListener("click", (e)=>{
+  if(walkTimer){ clearInterval(walkTimer); walkTimer = null; e.target.textContent = "最寄りへ歩く"; return; }
+  if(!myPos){ alert("先に位置情報が来るのを待ってください"); return; }
+  e.target.textContent = "止まる";
+  walkTimer = setInterval(()=>{
+    let best = null;
+    for(const s of SPOTS){ const d = haversineKm(myPos.lat, myPos.lng, s.lat, s.lng); if(!best || d < best.d) best = {s, d}; }
+    if(!best || best.d < 0.05){ clearInterval(walkTimer); walkTimer = null; document.getElementById("walkBtn").textContent = "最寄りへ歩く"; return; }
+    const mult = parseFloat(document.getElementById("dbgSpeed").value);
+    const stepKm = (4 * mult) * (0.5 / 3600); // 0.5秒ごとの移動量
+    const frac = Math.min(1, stepKm / best.d);
+    myPos = { lat: myPos.lat + (best.s.lat - myPos.lat) * frac, lng: myPos.lng + (best.s.lng - myPos.lng) * frac };
+    render();
+  }, 500);
+});
+renderMedals();
+startGeo();
+</script>
+</body>
+</html>
